@@ -4,8 +4,10 @@
 @page "/" 
 @inherits Page
 @*@inject HttpClient Http*@
+@inject IMediator mediator
 
 <div class="row">
+    <b>@users.Count</b>
 	@foreach (var category in categories)
 	{
 		<div class="col-sm-12 col-md-6 col-lg-3 p-1">
@@ -35,10 +37,14 @@
     }
 
     protected List<Category> categories = new List<Category>();
+    protected List<User> users = new List<User>();
+
     protected override async Task OnInitializedAsync()
     {
         categories = //await Http.GetJsonAsync<List<Category>>("sample-data/categories.json");			
             new List<Category>() { new Category() { Description = "asd", Id = 1, Name = "asd" } };
+
+        users = await mediator.Send<List<User>>(new UserRequest());        
     }
 
     protected string GetUrl(int id)
