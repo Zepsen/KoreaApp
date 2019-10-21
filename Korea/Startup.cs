@@ -28,7 +28,7 @@ namespace Korea
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IDbContext, DbContext>();
-
+            
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<WeatherForecastService>();

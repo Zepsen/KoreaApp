@@ -1,0 +1,49 @@
+@using Korea.Shared.Models;
+@using Korea.Core;
+
+@page "/" 
+@inherits Page
+@*@inject HttpClient Http*@
+
+<div class="row">
+	@foreach (var category in categories)
+	{
+		<div class="col-sm-12 col-md-6 col-lg-3 p-1">
+			<div class="card shadow-sm pointer">
+				<img src="@category.Image" class="card-img-top" alt="@category.Name">
+				<div class="card-body">
+					<h5 class="card-title">@category.Name</h5>
+					<p class="card-text">@category.Description</p>					
+					<NavLink class="btn btn-default" href="@GetUrl(category.Id)" Match="NavLinkMatch.All">
+                		Go to
+            		</NavLink>
+					<!-- <a href="#" class="btn btn-outline-info">Go to</a> -->
+				</div>
+			</div>
+		</div>
+	}
+</div>
+
+@code 
+{
+    protected override void Breadcrumbs()
+    {
+        BasePage.AddBreadcrump(new List<Breadcrumb>
+        {
+            new Breadcrumb { Name = "Categories", Active = true } ,
+        });
+    }
+
+    protected List<Category> categories = new List<Category>();
+    protected override async Task OnInitializedAsync()
+    {
+        categories = //await Http.GetJsonAsync<List<Category>>("sample-data/categories.json");			
+            new List<Category>() { new Category() { Description = "asd", Id = 1, Name = "asd" } };
+    }
+
+    protected string GetUrl(int id)
+    {
+        return "category/" + id;
+    }
+
+}

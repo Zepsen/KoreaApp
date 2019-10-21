@@ -1,0 +1,76 @@
+@page "/category/{Id:int}" 
+
+
+@using System.Linq;
+
+@inherits Page
+@*@inject HttpClient Http*@
+
+<div class="row">
+	<SearchFrom OnChanged="FilterGoods"/>
+</div>
+
+<div class="row">
+	@foreach (var good in goods.Data)
+	{
+		<GoodCard Model="good"/>
+	}	
+</div>
+
+<div class="row">
+	<Pagination Model="pagination" OnChange="OnChangePage"/>
+</div>
+
+
+@code 
+{	
+    [Parameter]
+    public int Id { get; set; }
+
+    private PaginationModel pagination = new PaginationModel();
+    private Result<Good> goods = new Result<Good>();
+    private FilterModel filter = new FilterModel();
+
+
+    protected override void Breadcrumbs()
+    {
+        BasePage.AddBreadcrump(new List<Breadcrumb>
+        {
+            new Breadcrumb { Name = "Categories", Route = "/" },
+            new Breadcrumb { Name = Category.Crumb(Id), Active = true }
+        });
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        goods = await GetGoods(filter);
+    }
+
+    private async Task<Result<Good>> GetGoods(FilterModel filter)
+    {
+        var res = //await Http.GetJsonAsync<List<Good>>("sample-data/goods.json");
+            new List<Good> { new Good { CategoryId = 1, Description = "ads", Id = 1, Price = 100, Title = "asd" } };
+
+            res = res.Where(i => i.CategoryId == Id).ToList();
+
+        pagination.LastPage = res.Count / filter.Take + 1;
+
+        return new Result<Good>
+        {
+            Data = res.Skip((filter.Page - 1) * filter.Take).Take(filter.Take).ToList(),
+            Total = res.Count
+        };
+    }
+
+    private async Task OnChangePage(int page)
+    {
+        filter.Page = page;
+        pagination.Page = page;
+        goods = await GetGoods(filter);
+    }
+
+    private async Task FilterGoods(string str)
+    {
+        var a = 1;
+    }
+}

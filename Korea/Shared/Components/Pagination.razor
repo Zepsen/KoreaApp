@@ -1,0 +1,58 @@
+@using Korea.Shared.Models;
+
+<nav aria-label="Page navigation example">
+	<ul class="pagination">
+		<li class="page-item @(Model.EnabledPrev ? null : "disabled")"><a class="page-link" @onclick="Prev">Previous</a></li>	
+		@foreach (var item in Range)
+		{
+			<li class="page-item @(item == Model.Page ? "active" : null)">
+				<a class="page-link" @onclick="async () => await GoTo(item)">
+					@item
+				</a>
+			</li>
+		}
+		<li class="page-item @(Model.EnabledNext ? null : "disabled")"><a class="page-link" @onclick="Next">Next</a></li>
+	</ul>	
+</nav>
+
+@code 
+{
+	[Parameter]
+	public PaginationModel Model { get; set; }
+
+	[Parameter]
+    public EventCallback<int> OnChange { get; set; }
+
+	private IEnumerable<int> Range { get; set;}
+
+	protected override void OnParametersSet()
+	{
+		var start = Model.Page == 1 ? Model.Page : Model.Page - 1;
+		var end = start + 5 < Model.LastPage ? start + 5 : Model.LastPage;
+		Range = Enumerable.Range(start, end);
+	}	
+
+	private async Task Prev()
+	{
+		if(Model.EnabledPrev) 
+		{			
+			await OnChange.InvokeAsync(Model.Page - 1);
+		}
+	}
+
+	private async Task Next()
+	{			
+		if(Model.EnabledNext)		
+		{
+			await OnChange.InvokeAsync(Model.Page + 1);
+		}
+	}	
+
+	private async Task GoTo(int page)
+	{			
+		if(Model.Page != page) 
+		{
+			await OnChange.InvokeAsync(page);
+		}
+	}	
+}

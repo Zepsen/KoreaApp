@@ -1,0 +1,20 @@
+
+<div class="col-sm-12 col-md-6 col-lg-3 p-1">
+	<div class="card shadow-sm pointer">
+		<img src="@Model.Image" class="card-img-top" alt="@Model.Title">
+		<div class="card-body">
+			<h5 class="card-title">@Model.Title</h5>
+			<p class="card-text">@Model.Description</p>
+			<h2><span class="badge badge-secondary">@Model.Price</span></h2>
+			<a href="@GetUrl(Model.Id)" class="btn btn-default">Go to @Model.Id</a>
+		</div>
+	</div>
+</div>
+
+@code 
+{
+	[Parameter]
+	public Good Model { get; set; }	
+
+	private string GetUrl(int id) => $"good/{Model.CategoryId}/{Model.Id}";
+}

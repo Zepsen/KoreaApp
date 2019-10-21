@@ -1,0 +1,66 @@
+[
+	{
+		"id": 1,
+		"title": "Test",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 198.12,
+		"categoryId": 1
+	},
+	{
+		"id": 2,
+		"title": "Test2",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 18.12,
+		"categoryId": 2
+	},
+	{
+		"id": 3,
+		"title": "Test3",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 198.12,
+		"categoryId": 1
+	},
+	{
+		"id": 4,
+		"title": "Test2",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 18.12,
+		"categoryId": 3
+	},
+	{
+		"id": 5,
+		"title": "Test",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 198.12,
+		"categoryId": 1
+	},
+	{
+		"id": 6,
+		"title": "Test2",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 18.12,
+		"categoryId": 2
+	},
+	{
+		"id": 7,
+		"title": "Test",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 198.12,
+		"categoryId": 2
+	},
+	{
+		"id": 8,
+		"title": "Test2",
+		"description": "asdfadfasfda",
+		"image": "123",
+		"price": 18.12,
+		"categoryId": 3
+	}
+]

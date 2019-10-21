@@ -1,0 +1,19 @@
+
+<div class="form-group">    
+	<input type="text" class="form-control" placeholder="Search" @oninput="CheckChanged" />
+</div>
+
+
+@code 
+{
+	[Parameter]
+	public EventCallback<string> OnChanged { get; set; }
+
+	private void CheckChanged(ChangeEventArgs e)
+	{
+		var str = e.Value.ToString();
+		if(string.IsNullOrEmpty(str)) return;
+
+		OnChanged.InvokeAsync(str);
+	}    
+}

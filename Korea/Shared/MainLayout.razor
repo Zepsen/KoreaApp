@@ -1,15 +1,62 @@
-﻿@inherits LayoutComponentBase
+﻿@using Korea.Core;
+@using Korea.Shared.Models;
 
-<div class="sidebar">
-    <NavMenu />
-</div>
+@inherits LayoutComponentBase
+@implements IBasePage
 
-<div class="main">
-    <div class="top-row px-4">
-        <a href="https://docs.microsoft.com/en-us/aspnet/" target="_blank">About</a>
-    </div>
+<CascadingValue Value="this">
+	<main class="main @Theme" style="margin-top: 50px">
 
-    <div class="content px-4">
-        @Body
-    </div>
-</div>
+		@if(HasHeader)
+		{
+			<nav class="navbar fixed-top navbar-dark bg-info">
+				<a class="navbar-brand" href="/">
+					<!-- <img src="/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> -->
+					Korea
+				</a>
+				<span class="oi oi-contrast mr-1 pointer" @onclick="ToggleTheme"></span>
+			</nav>
+		}
+
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb rounded-0">
+				@foreach (var bread in breads)
+				{
+					<li class="breadcrumb-item @(bread.Active ? "active" : null)">
+						@if(!bread.Active)
+						{
+							<a href="@bread.Route">@bread.Name</a>
+						}
+						else 
+							@bread.Name
+					</li>
+				}				 
+			</ol>
+		</nav>
+			
+		<div class="content px-4">
+			@Body
+		</div>
+	</main>
+</CascadingValue>
+
+@code 
+{
+	private List<Breadcrumb> breads = new List<Breadcrumb> { new Breadcrumb { Name = "Home"} };
+	
+	public void AddBreadcrump(List<Breadcrumb> breadcrumbs)
+	{
+		breads = breadcrumbs;
+		StateHasChanged();
+	}
+
+	public bool HasHeader { get; set;} = true;
+
+	private string Theme => DarkTheme ? "darktheme" : null;
+	private bool DarkTheme { get; set; } = true;
+	
+	private void ToggleTheme()
+	{
+		DarkTheme = !DarkTheme;
+	} 
+}
