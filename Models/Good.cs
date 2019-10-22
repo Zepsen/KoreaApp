@@ -1,5 +1,5 @@
 
-namespace Korea.Shared.Models
+namespace SharedModels
 {
 	public class Good
 	{

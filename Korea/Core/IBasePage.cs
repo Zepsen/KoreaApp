@@ -1,5 +1,5 @@
+using SharedModels;
 using System.Collections.Generic;
-using Korea.Shared.Models;
 
 namespace Korea.Core
 {

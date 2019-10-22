@@ -1,7 +1,6 @@
-
 using System.Collections.Generic;
 
-namespace Korea.Shared.Models
+namespace SharedModels
 {
 	public class FilterModel
 	{
