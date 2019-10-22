@@ -13,6 +13,7 @@
 
 
   <ItemGroup>
+    <ProjectReference Include="..\DataSource\Handlers.csproj" />
     <ProjectReference Include="..\Models\SharedModels.csproj" />
   </ItemGroup>
 

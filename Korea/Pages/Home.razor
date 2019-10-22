@@ -1,8 +1,5 @@
-
 @page "/" 
 @inherits Page
-
-@inject IMediator mediator
 
 <div class="row">
     <b>@users.Count</b>
@@ -10,9 +7,9 @@
 	{
 		<div class="col-sm-12 col-md-6 col-lg-3 p-1">
 			<div class="card shadow-sm pointer">
-				<img src="@category.Image" class="card-img-top" alt="@category.Name">
+				<img src="@category.Image" class="card-img-top" alt="@category.Title">
 				<div class="card-body">
-					<h5 class="card-title">@category.Name</h5>
+					<h5 class="card-title">@category.Title</h5>
 					<p class="card-text">@category.Description</p>					
 					<NavLink class="btn btn-default" href="@GetUrl(category.Id)" Match="NavLinkMatch.All">
                 		Go to
@@ -34,14 +31,12 @@
         });
     }
 
-    protected List<Category> categories = new List<Category>();
+    protected List<CategoryAllQuery.Category> categories = new List<CategoryAllQuery.Category>();
     protected List<UserAllQuery.User> users = new List<UserAllQuery.User>();
 
     protected override async Task OnInitializedAsync()
     {
-        categories = //await Http.GetJsonAsync<List<Category>>("sample-data/categories.json");			
-            new List<Category>() { new Category() { Description = "asd", Id = 1, Name = "asd" } };
-
+        categories = await mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());
         users = await mediator.Send<List<UserAllQuery.User>>(new UserAllQuery.Request());
     }
 

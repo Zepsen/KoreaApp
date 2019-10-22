@@ -5,7 +5,7 @@ namespace SharedModels
 	public class FilterModel
 	{
 		public int Page { get; set; } = 1;
-		public int Take { get; set; } = 2;
+		public int Take { get; set; } = 5;
 	}
 
 	public class PaginationModel

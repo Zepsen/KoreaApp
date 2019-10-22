@@ -14,7 +14,7 @@
 @code 
 {
 	[Parameter]
-	public SharedModels.Good Model { get; set; }	
+	public GoodsByCategoryQuery.Good Model { get; set; }	
 
 	private string GetUrl(int id) => $"good/{Model.CategoryId}/{Model.Id}";
 }

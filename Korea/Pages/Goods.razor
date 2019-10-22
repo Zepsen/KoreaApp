@@ -26,7 +26,7 @@
     public int Id { get; set; }
 
     private PaginationModel pagination = new PaginationModel();
-    private Result<Good> goods = new Result<Good>();
+    private Result<GoodsByCategoryQuery.Good> goods = new Result<GoodsByCategoryQuery.Good>();
     private FilterModel filter = new FilterModel();
 
 
@@ -44,18 +44,19 @@
         goods = await GetGoods(filter);
     }
 
-    private async Task<Result<Good>> GetGoods(FilterModel filter)
+    private async Task<Result<GoodsByCategoryQuery.Good>> GetGoods(FilterModel filter)
     {
-        var res = //await Http.GetJsonAsync<List<Good>>("sample-data/goods.json");
-            new List<Good> { new Good { CategoryId = 1, Description = "ads", Id = 1, Price = 100, Title = "asd" } };
+        var res = await mediator.Send<List<GoodsByCategoryQuery.Good>>(new GoodsByCategoryQuery.Request() { 
+            CategoryId = Id,
+            Skip = filter.Page - 1,
+            Take = filter.Take,
+        });
+        
+        //pagination.LastPage = res.Count / filter.Take + 1;
 
-            res = res.Where(i => i.CategoryId == Id).ToList();
-
-        pagination.LastPage = res.Count / filter.Take + 1;
-
-        return new Result<Good>
+        return new Result<GoodsByCategoryQuery.Good>
         {
-            Data = res.Skip((filter.Page - 1) * filter.Take).Take(filter.Take).ToList(),
+            Data = res.ToList(),
             Total = res.Count
         };
     }
