@@ -36,14 +36,14 @@
     }
 
     protected List<Category> categories = new List<Category>();
-    protected List<User> users = new List<User>();
+    protected List<UserAllQuery.User> users = new List<UserAllQuery.User>();
 
     protected override async Task OnInitializedAsync()
     {
         categories = //await Http.GetJsonAsync<List<Category>>("sample-data/categories.json");			
             new List<Category>() { new Category() { Description = "asd", Id = 1, Name = "asd" } };
 
-        users = await mediator.Send<List<User>>(new UserRequest());        
+        users = await mediator.Send<List<UserAllQuery.User>>(new UserAllQuery.Request());
     }
 
     protected string GetUrl(int id)
