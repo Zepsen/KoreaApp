@@ -1,7 +1,7 @@
 using SharedModels;
 using System.Collections.Generic;
 
-namespace Korea.Core
+namespace Korea.Shared
 {
     public interface IBasePage
     {
