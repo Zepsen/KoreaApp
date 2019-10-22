@@ -23,9 +23,9 @@ namespace DB
             // использование Fluent API
             base.OnModelCreating(modelBuilder);
 
-            modelBuilder.Entity<User>()
+            modelBuilder.Entity<Good>()
                 .HasOne(p => p.Category)
-                .WithMany(t => t.Users)
+                .WithMany(t => t.Goods)
                 .HasForeignKey(p => p.CategoryId);
         }
     }
