@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ComponentsLib\Components.csproj" />
-    <ProjectReference Include="..\DataSource\DataSource.csproj" />
+    <ProjectReference Include="..\DataSource\Handlers.csproj" />
     <ProjectReference Include="..\Models\SharedModels.csproj" />
   </ItemGroup>
 

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29403.142
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Korea", "Korea\Korea.csproj", "{2F2D0DCE-1940-41B3-B42C-47D99D2D6B72}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataSource", "DataSource\DataSource.csproj", "{95AD1ED1-9C4B-42AF-9333-0BE36CE1567D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Handlers", "DataSource\Handlers.csproj", "{95AD1ED1-9C4B-42AF-9333-0BE36CE1567D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedModels", "Models\SharedModels.csproj", "{9E77C881-1D04-46F8-B69E-9C582B7D3BB3}"
 EndProject
