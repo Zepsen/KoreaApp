@@ -1,13 +1,13 @@
-﻿using System.Collections.Generic;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
+using SharedModels;
 
 namespace Handlers
 {
     public class GoodsByCategoryQuery
     {
-        public class Request : IRequest<List<Good>>
+        public class Request : IRequest<Result<Good>>
         {
             public int CategoryId { get; set; }
             public int Take { get; set; }
@@ -24,11 +24,11 @@ namespace Handlers
             public int CategoryId { get; set; }
         }
 
-        public class GoodsByCategoryQueryHandler : Query, IRequestHandler<Request, List<Good>>
+        public class GoodsByCategoryQueryHandler : Query, IRequestHandler<Request, Result<Good>>
         {
-            public async Task<List<Good>> Handle(Request request, CancellationToken cancellationToken)
-            {
-                return await QueryAsync<Good>("spGoodsByCategory_SelectAll", request);
+            public async Task<Result<Good>> Handle(Request request, CancellationToken cancellationToken)
+            {                
+                return await QueryMultipleAsync<Good>("spGoodsByCategory_SelectAll", request);
             }
         }
     }

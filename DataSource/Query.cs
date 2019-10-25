@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using SharedModels;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -21,6 +22,20 @@ namespace Handlers
             }
 
             return res.ToList();
+        }
+                
+
+        protected async Task<Result<T>> QueryMultipleAsync<T>(string sql, object request)
+        {
+            Result<T> res = new Result<T>();
+            using (IDbConnection conn = new SqlConnection(ConnectionString))
+            {
+                var grid = await conn.QueryMultipleAsync(sql, request, commandType: CommandType.StoredProcedure);
+                res.Data = grid.Read<T>().ToList();
+                res.Total = grid.Read<int>().First();
+            }
+
+            return res;
         }
     }
 }

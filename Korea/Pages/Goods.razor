@@ -46,19 +46,15 @@
 
     private async Task<Result<GoodsByCategoryQuery.Good>> GetGoods(FilterModel filter)
     {
-        var res = await mediator.Send<List<GoodsByCategoryQuery.Good>>(new GoodsByCategoryQuery.Request() { 
+        var res = await mediator.Send<Result<GoodsByCategoryQuery.Good>>(new GoodsByCategoryQuery.Request() {
             CategoryId = Id,
-            Skip = filter.Page - 1,
+            Skip = (filter.Page - 1) * filter.Take,
             Take = filter.Take,
         });
-        
-        //pagination.LastPage = res.Count / filter.Take + 1;
 
-        return new Result<GoodsByCategoryQuery.Good>
-        {
-            Data = res.ToList(),
-            Total = res.Count
-        };
+        pagination.LastPage = res.Total / filter.Take + 1;
+                
+        return res;
     }
 
     private async Task OnChangePage(int page)

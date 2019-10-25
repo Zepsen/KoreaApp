@@ -9,5 +9,8 @@ BEGIN
 	ORDER BY g.Id
 	OFFSET @Skip ROWS
 	FETCH NEXT @Take ROWS only	
+
+	SELECT COUNT(Id)  FROM Good g
+	WHERE CategoryId = @CategoryId
 END	
 
