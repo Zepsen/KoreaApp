@@ -6,6 +6,7 @@ namespace SharedModels
 	{
 		public int Page { get; set; } = 1;
 		public int Take { get; set; } = 5;
+        public string Search { get; set; }
 	}
 
 	public class PaginationModel

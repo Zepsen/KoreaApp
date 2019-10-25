@@ -6,14 +6,14 @@
 
 @code 
 {
-	[Parameter]
-	public EventCallback<string> OnChanged { get; set; }
+    [Parameter]
+    public EventCallback<string> OnChanged { get; set; }
 
-	private void CheckChanged(ChangeEventArgs e)
-	{
-		var str = e.Value.ToString();
-		if(string.IsNullOrEmpty(str)) return;
+    private void CheckChanged(ChangeEventArgs e)
+    {
+        var str = e.Value.ToString();
+        //if(string.IsNullOrEmpty(str)) return;
 
-		OnChanged.InvokeAsync(str);
-	}    
+        OnChanged.InvokeAsync(str);
+    }
 }
