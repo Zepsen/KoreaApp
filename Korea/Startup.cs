@@ -28,11 +28,13 @@ namespace Korea
 
             services.AddMediatR(domain);
             services.AddFluentValidation(new[] { domain });
-            
+
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddTransient(typeof(IPipelineBehavior<,>),typeof(LoggerBehavior<,>));
+            //This is middleware for mediatr, the order is importnant
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TestBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggerBehavior<,>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,7 +43,8 @@ namespace Korea
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-            } else
+            }
+            else
             {
                 app.UseExceptionHandler("/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
@@ -49,7 +52,7 @@ namespace Korea
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();            
+            app.UseStaticFiles();
 
             app.UseRouting();
 
