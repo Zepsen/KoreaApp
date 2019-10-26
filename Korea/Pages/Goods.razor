@@ -67,6 +67,7 @@
 
     private async Task FilterGoods(string str)
     {
+        pagination.Page = 1;
         filter.Page = 1;
         filter.Search = str;
         goods = await GetGoods(filter);
