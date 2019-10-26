@@ -32,7 +32,7 @@ namespace Korea
             services.AddRazorPages();
             services.AddServerSideBlazor();
 
-            services.AddTransient(typeof(IPipelineBehavior<,>),typeof(RequestValidationBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>),typeof(LoggerBehavior<,>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
