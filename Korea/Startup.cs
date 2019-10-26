@@ -1,10 +1,13 @@
 using Handlers;
+using Korea.Pipelines;
 using MediatR;
+using MediatR.Extensions.FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Reflection;
 
 namespace Korea
 {
@@ -21,9 +24,15 @@ namespace Korea
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMediatR(typeof(UserAllQuery));
+            var domain = typeof(UserAllQuery).GetTypeInfo().Assembly;
+
+            services.AddMediatR(domain);
+            services.AddFluentValidation(new[] { domain });
+            
             services.AddRazorPages();
             services.AddServerSideBlazor();
+
+            services.AddTransient(typeof(IPipelineBehavior<,>),typeof(RequestValidationBehavior<,>));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,7 +49,7 @@ namespace Korea
             }
 
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles();            
 
             app.UseRouting();
 

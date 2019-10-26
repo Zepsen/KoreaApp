@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using FluentValidation;
+using MediatR;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
@@ -19,6 +20,14 @@ namespace Handlers
             public string Description { get; set; }
             public string Image { get; set; }
         }
+
+        //public class RequestValidator : AbstractValidator<Request>
+        //{
+        //    public RequestValidator()
+        //    {
+        //        RuleFor(x => x.Id).LessThan(1);                
+        //    }
+        //}
 
         public class CategoryAllQueryHandler : Query, IRequestHandler<Request, List<Category>>
         {

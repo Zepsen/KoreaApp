@@ -31,9 +31,7 @@
     protected Good good = new Good();
     protected override async Task OnInitializedAsync()
     {
-        var res = //await Http.GetJsonAsync<List<Good>>("sample-data/goods.json");
-            new List<Good> { new Good { CategoryId = 1, Description = "ads", Id = 1, Price = 100, Title = "asd" } };
-
+        var res = new List<Good> { new Good { CategoryId = 1, Description = "ads", Id = 1, Price = 100, Title = "asd" } };
         good = res.FirstOrDefault(i => i.Id == Id);
     }
 }

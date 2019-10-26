@@ -1,5 +1,6 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
+using FluentValidation;
 using MediatR;
 using SharedModels;
 
@@ -23,6 +24,14 @@ namespace Handlers
             public string Image { get; set; }
             public decimal Price { get; set; }
             public int CategoryId { get; set; }
+        }
+
+        public class RequestValidator : AbstractValidator<Request>
+        {
+            public RequestValidator()
+            {
+                RuleFor(x => x.CategoryId).NotEqual(1);
+            }
         }
 
         public class GoodsByCategoryQueryHandler : Query, IRequestHandler<Request, Result<Good>>
