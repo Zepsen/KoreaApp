@@ -34,6 +34,7 @@ namespace Korea
 
             //This is middleware for mediatr, the order is importnant
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TestBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TestBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggerBehavior<,>));
         }
 
