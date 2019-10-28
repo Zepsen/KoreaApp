@@ -3316,3 +3316,443 @@ Error: Could not find '() => $('#toast')' in 'window'.
 2019-10-28 17:08:52.930 +02:00 [INF] User profile is available. Using 'C:\Users\Dmytro_Zepsen\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
 2019-10-28 17:08:53.032 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
 2019-10-28 17:08:53.069 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:05:51.305 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:05:51.538 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:05:51.600 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:05:51.646 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:05:51.661 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:05:51.663 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:05:51.857 +02:00 [INF] Executed page /_Host in 206.0526ms
+2019-10-28 23:05:51.860 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:05:51.862 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- Id: 'Id' must be greater than '0'.
+   at MediatR.Extensions.FluentValidation.AspNetCore.ValidationBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Internal.RequestHandlerWrapperImpl`2.<>c__DisplayClass0_1.<Handle>b__2()
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Korea.Pages.Home.OnInitializedAsync() in C:\Users\ZEPSENHOME\source\repos\KoreaApp\Korea\Pages\Home.razor:line 39
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewComponentFrame(DiffContext& diffContext, Int32 frameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewSubtree(DiffContext& diffContext, Int32 frameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderInExistingBatch(RenderQueueEntry renderQueueEntry)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessPendingRender()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToRenderQueue(Int32 componentId, RenderFragment renderFragment)
+   at Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderRootComponentAsync(Int32 componentId, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.CreateInitialRenderAsync(Type componentType, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.RenderComponentAsync(Type componentType, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.RendererSynchronizationContext.<>c__11`1.<<InvokeAsync>b__11_0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.RazorComponents.StaticComponentRenderer.PrerenderComponentAsync(ParameterView parameters, HttpContext httpContext, Type componentType)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperComponentExtensions.PrerenderedServerComponentAsync(HttpContext context, ServerComponentInvocationSequence invocationId, Type type, ParameterView parametersCollection)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperComponentExtensions.RenderComponentAsync[TComponent](IHtmlHelper htmlHelper, RenderMode renderMode, Object parameters)
+   at Korea.Pages.Pages__Host.<ExecuteAsync>b__10_1() in C:\Users\ZEPSENHOME\source\repos\KoreaApp\Korea\Pages\_Host.cshtml:line 17
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at Korea.Pages.Pages__Host.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-10-28 23:05:51.992 +02:00 [INF] Request finished in 458.0258ms 500 text/html; charset=utf-8
+2019-10-28 23:06:05.518 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:06:05.520 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:06:05.521 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:06:05.522 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:06:05.522 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:06:05.535 +02:00 [INF] Executed page /_Host in 13.1301ms
+2019-10-28 23:06:05.535 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:06:05.535 +02:00 [ERR] An unhandled exception has occurred while executing the request.
+FluentValidation.ValidationException: Validation failed: 
+ -- Id: 'Id' must be greater than '0'.
+   at MediatR.Extensions.FluentValidation.AspNetCore.ValidationBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Internal.RequestHandlerWrapperImpl`2.<>c__DisplayClass0_1.<Handle>b__2()
+   at MediatR.Pipeline.RequestPostProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at MediatR.Pipeline.RequestPreProcessorBehavior`2.Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate`1 next)
+   at Korea.Pages.Home.OnInitializedAsync() in C:\Users\ZEPSENHOME\source\repos\KoreaApp\Korea\Pages\Home.razor:line 39
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewComponentFrame(DiffContext& diffContext, Int32 frameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InitializeNewSubtree(DiffContext& diffContext, Int32 frameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.InsertNewFrame(DiffContext& diffContext, Int32 newFrameIndex)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.AppendDiffEntriesForRange(DiffContext& diffContext, Int32 oldStartIndex, Int32 oldEndIndexExcl, Int32 newStartIndex, Int32 newEndIndexExcl)
+   at Microsoft.AspNetCore.Components.RenderTree.RenderTreeDiffBuilder.ComputeDiff(Renderer renderer, RenderBatchBuilder batchBuilder, Int32 componentId, ArrayRange`1 oldTree, ArrayRange`1 newTree)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.RenderIntoBatch(RenderBatchBuilder batchBuilder, RenderFragment renderFragment)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderInExistingBatch(RenderQueueEntry renderQueueEntry)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessRenderQueue()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.ProcessPendingRender()
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToRenderQueue(Int32 componentId, RenderFragment renderFragment)
+   at Microsoft.AspNetCore.Components.ComponentBase.StateHasChanged()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallOnParametersSetAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.RunInitAndSetParametersAsync()
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.HandleException(Exception exception)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.AddToPendingTasks(Task task)
+   at Microsoft.AspNetCore.Components.Rendering.ComponentState.SetDirectParameters(ParameterView parameters)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.RenderRootComponentAsync(Int32 componentId, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.CreateInitialRenderAsync(Type componentType, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.HtmlRenderer.RenderComponentAsync(Type componentType, ParameterView initialParameters)
+   at Microsoft.AspNetCore.Components.Rendering.RendererSynchronizationContext.<>c__11`1.<<InvokeAsync>b__11_0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.RazorComponents.StaticComponentRenderer.PrerenderComponentAsync(ParameterView parameters, HttpContext httpContext, Type componentType)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperComponentExtensions.PrerenderedServerComponentAsync(HttpContext context, ServerComponentInvocationSequence invocationId, Type type, ParameterView parametersCollection)
+   at Microsoft.AspNetCore.Mvc.Rendering.HtmlHelperComponentExtensions.RenderComponentAsync[TComponent](IHtmlHelper htmlHelper, RenderMode renderMode, Object parameters)
+   at Korea.Pages.Pages__Host.<ExecuteAsync>b__10_1() in C:\Users\ZEPSENHOME\source\repos\KoreaApp\Korea\Pages\_Host.cshtml:line 17
+   at Microsoft.AspNetCore.Razor.Runtime.TagHelpers.TagHelperExecutionContext.SetOutputContentAsync()
+   at Korea.Pages.Pages__Host.ExecuteAsync()
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|29_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|24_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeFilterPipelineAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2019-10-28 23:06:05.573 +02:00 [INF] Request finished in 55.0172ms 500 text/html; charset=utf-8
+2019-10-28 23:06:51.757 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:06:51.941 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:06:51.992 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:06:52.031 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:06:52.047 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:06:52.050 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:06:52.225 +02:00 [INF] 
+
+2019-10-28 23:06:52.228 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:52.600 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:06:52.603 +02:00 [INF] 
+
+2019-10-28 23:06:52.603 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:52.612 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:06:52.657 +02:00 [INF] Executed page /_Host in 619.097ms
+2019-10-28 23:06:52.660 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:06:52.664 +02:00 [INF] Request finished in 726.2016ms 200 text/html; charset=utf-8
+2019-10-28 23:06:52.847 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:06:52.857 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:06:52.861 +02:00 [INF] Request finished in 14.372100000000001ms 304 text/css
+2019-10-28 23:06:52.877 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:06:52.877 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:06:52.877 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:06:52.877 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:06:52.877 +02:00 [INF] Request finished in 1.0029000000000001ms 304 text/css
+2019-10-28 23:06:52.877 +02:00 [INF] Request finished in 0.9996ms 304 application/javascript
+2019-10-28 23:06:52.897 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:06:52.897 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:06:52.897 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:06:52.897 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:06:52.897 +02:00 [INF] Request finished in 0.6702ms 304 text/css
+2019-10-28 23:06:52.897 +02:00 [INF] Request finished in 0.8103ms 304 text/css
+2019-10-28 23:06:53.052 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:06:53.056 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:06:53.067 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:06:53.067 +02:00 [INF] Request finished in 15.530800000000001ms 200 application/json
+2019-10-28 23:06:53.143 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=czhOY92gQol_BC0DGXnCfQ  
+2019-10-28 23:06:53.144 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:06:53.144 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:06:53.144 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:06:53.145 +02:00 [INF] Request finished in 0.6156ms 304 application/font-woff
+2019-10-28 23:06:53.306 +02:00 [INF] 
+
+2019-10-28 23:06:53.306 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:53.319 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:06:53.319 +02:00 [INF] 
+
+2019-10-28 23:06:53.319 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:53.320 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:06:53.996 +02:00 [INF] 
+
+2019-10-28 23:06:53.996 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:54.087 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:06:55.153 +02:00 [INF] 
+
+2019-10-28 23:06:55.153 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:55.157 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:06:55.629 +02:00 [INF] 
+
+2019-10-28 23:06:55.630 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:55.632 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:06:56.595 +02:00 [INF] 
+
+2019-10-28 23:06:56.595 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:56.604 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:06:57.537 +02:00 [INF] 
+
+2019-10-28 23:06:57.537 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:57.542 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:06:57.544 +02:00 [INF] 
+
+2019-10-28 23:06:57.545 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:57.558 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:06:58.339 +02:00 [INF] 
+
+2019-10-28 23:06:58.339 +02:00 [WRN] Request Request begin
+2019-10-28 23:06:58.360 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:07:00.616 +02:00 [INF] 
+
+2019-10-28 23:07:00.616 +02:00 [WRN] Request Request begin
+2019-10-28 23:07:00.628 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:07:00.630 +02:00 [INF] 
+
+2019-10-28 23:07:00.630 +02:00 [WRN] Request Request begin
+2019-10-28 23:07:00.636 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:08:52.966 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:08:53.158 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:08:53.213 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:08:53.237 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:08:53.237 +02:00 [INF] Request finished in 83.9387ms 200 application/json
+2019-10-28 23:08:53.254 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=w2WDeJLpe6WFseQ3AFzR_A  
+2019-10-28 23:08:53.255 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:09:01.668 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:09:01.854 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:09:01.905 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:09:01.943 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:09:01.958 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:09:01.961 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:09:02.157 +02:00 [INF] Executed page /_Host in 207.9473ms
+2019-10-28 23:09:02.158 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:09:02.159 +02:00 [INF] Request finished in 308.9608ms 200 text/html; charset=utf-8
+2019-10-28 23:09:02.321 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:09:02.326 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:09:02.329 +02:00 [INF] Request finished in 8.0029ms 304 text/css
+2019-10-28 23:09:02.350 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:09:02.351 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:09:02.351 +02:00 [INF] Request finished in 0.8792000000000001ms 304 text/css
+2019-10-28 23:09:02.351 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:09:02.351 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:09:02.351 +02:00 [INF] Request finished in 0.41100000000000003ms 304 application/javascript
+2019-10-28 23:09:02.374 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:09:02.375 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:09:02.375 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:09:02.375 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:09:02.375 +02:00 [INF] Request finished in 0.6314000000000001ms 304 text/css
+2019-10-28 23:09:02.375 +02:00 [INF] Request finished in 0.6338ms 304 text/css
+2019-10-28 23:09:02.510 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:09:02.519 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:09:02.538 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:09:02.538 +02:00 [INF] Request finished in 28.4735ms 200 application/json
+2019-10-28 23:09:02.610 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=lc-_NnsfOO1Zoj1PqgOpSQ  
+2019-10-28 23:09:02.611 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:09:02.623 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:09:02.623 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:09:02.623 +02:00 [INF] Request finished in 0.9165000000000001ms 304 application/font-woff
+2019-10-28 23:09:08.029 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:09:08.034 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:09:08.036 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:09:08.037 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:09:08.038 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:09:08.051 +02:00 [INF] Executed page /_Host in 14.0039ms
+2019-10-28 23:09:08.051 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:09:08.051 +02:00 [INF] Request finished in 23.129900000000003ms 200 text/html; charset=utf-8
+2019-10-28 23:09:08.110 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryCv1tMAfYGqBaXJb8 359
+2019-10-28 23:09:08.111 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:09:08.112 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:09:08.113 +02:00 [INF] Request finished in 5503.2408000000005ms 101 
+2019-10-28 23:09:08.143 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:09:08.143 +02:00 [INF] Request finished in 33.0992ms 200 
+2019-10-28 23:09:08.176 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:09:08.176 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:09:08.176 +02:00 [INF] Request finished in 0.9636ms 304 text/css
+2019-10-28 23:09:08.195 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:09:08.195 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:09:08.195 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:09:08.195 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:09:08.195 +02:00 [INF] Request finished in 0.5168ms 304 application/javascript
+2019-10-28 23:09:08.195 +02:00 [INF] Request finished in 0.6173000000000001ms 304 text/css
+2019-10-28 23:09:08.213 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:09:08.213 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:09:08.214 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:09:08.214 +02:00 [INF] Request finished in 0.7978000000000001ms 304 text/css
+2019-10-28 23:09:08.214 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:09:08.215 +02:00 [INF] Request finished in 1.8743ms 304 text/css
+2019-10-28 23:09:08.273 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:09:08.273 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:09:08.274 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:09:08.274 +02:00 [INF] Request finished in 1.2853ms 200 application/json
+2019-10-28 23:09:08.318 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=OIIwgqcXSec5NWDq6BugHg  
+2019-10-28 23:09:08.318 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:09:08.321 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:09:08.322 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:09:08.322 +02:00 [INF] Request finished in 0.7276ms 304 application/font-woff
+2019-10-28 23:09:08.351 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/favicon.ico  
+2019-10-28 23:09:08.363 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\favicon.ico'
+2019-10-28 23:09:08.364 +02:00 [INF] Request finished in 13.629700000000001ms 200 image/x-icon
+2019-10-28 23:10:25.183 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:10:25.366 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:10:25.418 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:10:25.439 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:10:25.440 +02:00 [INF] Request finished in 77.7047ms 200 application/json
+2019-10-28 23:10:25.450 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=fvKk5kEEoHDsaVJirMXuig  
+2019-10-28 23:10:25.451 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:11:11.860 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:11:12.109 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:11:12.190 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:11:12.254 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:11:12.279 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:11:12.283 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:11:12.555 +02:00 [INF] 
+
+2019-10-28 23:11:12.560 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:12.725 +02:00 [INF] 
+
+2019-10-28 23:11:12.725 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:12.960 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:12.960 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:13.010 +02:00 [INF] Executed page /_Host in 748.3836ms
+2019-10-28 23:11:13.015 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:11:13.021 +02:00 [INF] Request finished in 916.6598ms 200 text/html; charset=utf-8
+2019-10-28 23:11:13.326 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:11:13.342 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:11:13.343 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:11:13.344 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:11:13.344 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:11:13.344 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:11:13.345 +02:00 [INF] Request finished in 1.8502ms 304 text/css
+2019-10-28 23:11:13.345 +02:00 [INF] Request finished in 19.743100000000002ms 304 text/css
+2019-10-28 23:11:13.345 +02:00 [INF] Request finished in 1.6165ms 304 application/javascript
+2019-10-28 23:11:13.367 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:11:13.368 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:11:13.368 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:11:13.368 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:11:13.368 +02:00 [INF] Request finished in 0.9939ms 304 text/css
+2019-10-28 23:11:13.369 +02:00 [INF] Request finished in 0.9561000000000001ms 304 text/css
+2019-10-28 23:11:13.539 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:11:13.545 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:11:13.560 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:11:13.560 +02:00 [INF] Request finished in 20.999000000000002ms 200 application/json
+2019-10-28 23:11:13.656 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=5PcmtOdFdkEL5MqvgE_aTw  
+2019-10-28 23:11:13.657 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:11:13.660 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:11:13.661 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:11:13.661 +02:00 [INF] Request finished in 0.7783ms 304 application/font-woff
+2019-10-28 23:11:13.846 +02:00 [INF] 
+
+2019-10-28 23:11:13.846 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:13.856 +02:00 [INF] 
+
+2019-10-28 23:11:13.856 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:13.872 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:13.872 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:14.746 +02:00 [INF] 
+
+2019-10-28 23:11:14.756 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:14.967 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:11:16.814 +02:00 [INF] 
+
+2019-10-28 23:11:16.815 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:16.817 +02:00 [INF] 
+
+2019-10-28 23:11:16.817 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:16.840 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:16.840 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:17.612 +02:00 [INF] 
+
+2019-10-28 23:11:17.613 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:17.621 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:11:18.860 +02:00 [INF] 
+
+2019-10-28 23:11:18.861 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:18.863 +02:00 [INF] 
+
+2019-10-28 23:11:18.869 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:18.873 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:18.876 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:19.609 +02:00 [INF] 
+
+2019-10-28 23:11:19.609 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:19.622 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:11:21.963 +02:00 [INF] 
+
+2019-10-28 23:11:21.963 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:21.984 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:11:22.368 +02:00 [INF] 
+
+2019-10-28 23:11:22.369 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:22.369 +02:00 [INF] 
+
+2019-10-28 23:11:22.370 +02:00 [WRN] Request Request begin
+2019-10-28 23:11:22.371 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:22.385 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:11:23.966 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryx2ZEnwSfqIhvVRg0 359
+2019-10-28 23:11:23.969 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:11:23.998 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:11:23.999 +02:00 [INF] Request finished in 33.037600000000005ms 200 
+2019-10-28 23:11:24.337 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryPDppa16fNqkJWi5Y 359
+2019-10-28 23:11:24.339 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:11:24.342 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:11:24.342 +02:00 [INF] Request finished in 6.0038ms 200 
+2019-10-28 23:11:24.705 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundary3OV3hzewuQl3yUMw 359
+2019-10-28 23:11:24.707 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:11:24.725 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:11:24.726 +02:00 [INF] Request finished in 21.1372ms 200 
+2019-10-28 23:11:24.768 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:11:24.769 +02:00 [INF] Request finished in 11112.1932ms 101 

@@ -36,8 +36,21 @@
 
     protected override async Task OnInitializedAsync()
     {
-        categories = await mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());
-        users = await mediator.Send<List<UserAllQuery.User>>(new UserAllQuery.Request());
+        try
+        {
+            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());
+            var usersTask = mediator.Send<List<UserAllQuery.User>>(new UserAllQuery.Request());
+
+            await Task.WhenAll(categoriesTask, usersTask);
+            
+            categories = categoriesTask.Result;
+            users = usersTask.Result;
+        }
+        catch (Exception ex)
+        {
+            await BasePage.ShowError(ex.Message);
+        }
+        
     }
 
     protected string GetUrl(int id)

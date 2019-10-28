@@ -25,7 +25,7 @@ namespace Handlers
         {
             public RequestValidator()
             {
-                RuleFor(x => x.Id).GreaterThan(0);
+                RuleFor(x => x.Id).GreaterThan(-1);
             }
         }
 
