@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Korea", "Korea\Korea.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Handlers", "DataSource\Handlers.csproj", "{95AD1ED1-9C4B-42AF-9333-0BE36CE1567D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedModels", "Models\SharedModels.csproj", "{9E77C881-1D04-46F8-B69E-9C582B7D3BB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedModels", "Models\SharedModels.csproj", "{9E77C881-1D04-46F8-B69E-9C582B7D3BB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Components", "ComponentsLib\Components.csproj", "{F5BD46A3-BD8D-4911-89CF-F25EECC41DF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Components", "ComponentsLib\Components.csproj", "{F5BD46A3-BD8D-4911-89CF-F25EECC41DF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{2C35C5C2-D725-46BB-A681-B95EE9F12485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DB", "DB\DB.csproj", "{2C35C5C2-D725-46BB-A681-B95EE9F12485}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
