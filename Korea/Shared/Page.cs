@@ -13,7 +13,6 @@ namespace Korea.Shared
 			Breadcrumbs();
 		}
 
-		protected abstract void Breadcrumbs();
-
+		protected abstract void Breadcrumbs();        
 	}
 }

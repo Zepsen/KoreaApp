@@ -1,27 +1,27 @@
-@page "/category/{Id:int}" 
+@page "/category/{Id:int}"
 
 @using System.Linq;
 
 @inherits Page
 
 <div class="row">
-	<SearchFrom OnChanged="FilterGoods"/>
+    <SearchFrom OnChanged="FilterGoods" />
 </div>
 
 <div class="row">
-	@foreach (var good in goods.Data)
-	{
-		<GoodCard Model="good"/>
-	}	
+    @foreach (var good in goods.Data)
+    {
+        <GoodCard Model="good" />
+    }
 </div>
 
 <div class="row">
-	<Pagination Model="pagination" OnChange="OnChangePage"/>
+    <Pagination Model="pagination" OnChange="OnChangePage" />
 </div>
 
 
-@code 
-{	
+@code
+{
     [Parameter]
     public int Id { get; set; }
 
@@ -33,7 +33,7 @@
     protected override void Breadcrumbs()
     {
         BasePage.AddBreadcrump(new List<Breadcrumb>
-        {
+    {
             new Breadcrumb { Name = "Categories", Route = "/" },
             new Breadcrumb { Name = Category.Crumb(Id), Active = true }
         });
@@ -46,15 +46,24 @@
 
     private async Task<Result<GoodsByCategoryQuery.Good>> GetGoods(FilterModel filter)
     {
-        var res = await mediator.Send<Result<GoodsByCategoryQuery.Good>>(new GoodsByCategoryQuery.Request() {
-            CategoryId = Id,
-            Skip = (filter.Page - 1) * filter.Take,
-            Take = filter.Take,
-            Search = filter.Search
-        });
+        Result<GoodsByCategoryQuery.Good> res = new Result<GoodsByCategoryQuery.Good>();
+        try
+        {
+            res = await mediator.Send<Result<GoodsByCategoryQuery.Good>>(new GoodsByCategoryQuery.Request()
+            {
+                CategoryId = Id,
+                Skip = (filter.Page - 1) * filter.Take,
+                Take = filter.Take,
+                Search = filter.Search
+            });
 
-        pagination.LastPage = res.Total / filter.Take + 1;
-                
+            pagination.LastPage = res.Total / filter.Take + 1;
+        }
+        catch (Exception ex)
+        {
+            await BasePage.ShowError(ex.Message); 
+        }
+
         return res;
     }
 
