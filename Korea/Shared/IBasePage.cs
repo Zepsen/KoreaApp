@@ -1,5 +1,6 @@
 using SharedModels;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Korea.Shared
 {
@@ -7,6 +8,7 @@ namespace Korea.Shared
     {
 		bool HasHeader { get; set; }
         void AddBreadcrump(List<Breadcrumb> breadcrumbs);
+        Task ShowError(string message);
 
     }
 }

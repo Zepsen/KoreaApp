@@ -17,7 +17,7 @@ namespace Korea.Pipelines
             _validators = validators;
         }
 
-        public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
             var context = new ValidationContext(request);
 
@@ -32,7 +32,7 @@ namespace Korea.Pipelines
                 throw new ValidationException(failures);
             }
 
-            return next();
+            return await next();
         }
 
     }

@@ -33,9 +33,7 @@ namespace Korea
             services.AddServerSideBlazor();
 
             //This is middleware for mediatr, the order is importnant
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TestBehavior<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(TestBehavior<,>));
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggerBehavior<,>));
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggerBehavior<,>));            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
