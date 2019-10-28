@@ -3756,3 +3756,635 @@ FluentValidation.ValidationException: Validation failed:
 2019-10-28 23:11:24.726 +02:00 [INF] Request finished in 21.1372ms 200 
 2019-10-28 23:11:24.768 +02:00 [INF] Executed endpoint '/_blazor'
 2019-10-28 23:11:24.769 +02:00 [INF] Request finished in 11112.1932ms 101 
+2019-10-28 23:16:31.530 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:16:31.731 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:16:31.783 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:16:31.819 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:16:31.834 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:16:31.837 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:16:31.973 +02:00 [INF] 
+
+2019-10-28 23:16:31.975 +02:00 [WRN] Request Request begin
+2019-10-28 23:16:32.066 +02:00 [INF] 
+
+2019-10-28 23:16:32.066 +02:00 [WRN] Request Request begin
+2019-10-28 23:16:32.257 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:16:32.257 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:16:32.300 +02:00 [INF] Executed page /_Host in 474.7198ms
+2019-10-28 23:16:32.303 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:16:32.306 +02:00 [INF] Request finished in 579.6069ms 200 text/html; charset=utf-8
+2019-10-28 23:16:32.455 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:16:32.461 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:16:32.463 +02:00 [INF] Request finished in 7.9981ms 304 text/css
+2019-10-28 23:16:32.479 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:16:32.479 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:16:32.480 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:16:32.480 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:16:32.480 +02:00 [INF] Request finished in 0.7894ms 304 text/css
+2019-10-28 23:16:32.480 +02:00 [INF] Request finished in 0.7254ms 304 application/javascript
+2019-10-28 23:16:32.496 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:16:32.497 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:16:32.497 +02:00 [INF] Request finished in 1.1587ms 304 text/css
+2019-10-28 23:16:32.500 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:16:32.500 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:16:32.500 +02:00 [INF] Request finished in 0.5395ms 304 text/css
+2019-10-28 23:16:32.615 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:16:32.624 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:16:32.638 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:16:32.638 +02:00 [INF] Request finished in 24.592100000000002ms 200 application/json
+2019-10-28 23:16:32.716 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=x03QzA1U2riCSin712zqOg  
+2019-10-28 23:16:32.716 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:16:32.723 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:16:32.723 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:16:32.724 +02:00 [INF] Request finished in 1.1674ms 304 application/font-woff
+2019-10-28 23:16:32.862 +02:00 [INF] 
+
+2019-10-28 23:16:32.862 +02:00 [WRN] Request Request begin
+2019-10-28 23:16:32.866 +02:00 [INF] 
+
+2019-10-28 23:16:32.866 +02:00 [WRN] Request Request begin
+2019-10-28 23:16:32.874 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:16:32.874 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:16:34.258 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundary90XL7ABMjOoyEhUT 359
+2019-10-28 23:16:34.262 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:16:34.315 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:16:34.316 +02:00 [INF] Request finished in 59.7764ms 200 
+2019-10-28 23:16:34.358 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:16:34.358 +02:00 [INF] Request finished in 1646.0401000000002ms 101 
+2019-10-28 23:17:00.766 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:17:00.941 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:00.995 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:01.051 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:01.073 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:01.076 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:01.221 +02:00 [INF] 
+
+2019-10-28 23:17:01.223 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:01.307 +02:00 [INF] 
+
+2019-10-28 23:17:01.308 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:01.499 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:01.500 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:01.546 +02:00 [INF] Executed page /_Host in 484.7434ms
+2019-10-28 23:17:01.547 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:01.551 +02:00 [INF] Request finished in 613.7677ms 200 text/html; charset=utf-8
+2019-10-28 23:17:01.713 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:01.719 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:01.722 +02:00 [INF] Request finished in 10.4856ms 304 text/css
+2019-10-28 23:17:01.735 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:01.735 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:01.735 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:01.735 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:01.736 +02:00 [INF] Request finished in 0.992ms 304 text/css
+2019-10-28 23:17:01.736 +02:00 [INF] Request finished in 0.9888ms 304 application/javascript
+2019-10-28 23:17:01.753 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:01.753 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:01.753 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:01.753 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:01.754 +02:00 [INF] Request finished in 0.6835ms 304 text/css
+2019-10-28 23:17:01.754 +02:00 [INF] Request finished in 0.6562ms 304 text/css
+2019-10-28 23:17:01.868 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:01.881 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:01.893 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:01.893 +02:00 [INF] Request finished in 26.9157ms 200 application/json
+2019-10-28 23:17:01.940 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=ACVlO77hO60OeiuvvhM4zA  
+2019-10-28 23:17:01.941 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:01.948 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:01.948 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:01.948 +02:00 [INF] Request finished in 0.657ms 304 application/font-woff
+2019-10-28 23:17:02.059 +02:00 [INF] 
+
+2019-10-28 23:17:02.059 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:02.063 +02:00 [INF] 
+
+2019-10-28 23:17:02.064 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:02.072 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:02.072 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:02.840 +02:00 [INF] 
+
+2019-10-28 23:17:02.840 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:02.907 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:17:05.094 +02:00 [INF] 
+
+2019-10-28 23:17:05.095 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:05.108 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:17:05.480 +02:00 [INF] 
+
+2019-10-28 23:17:05.481 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:05.495 +02:00 [INF] 
+
+2019-10-28 23:17:05.495 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:05.499 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:05.500 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:06.828 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:06.829 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:06.830 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:06.831 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:06.832 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:06.838 +02:00 [INF] 
+
+2019-10-28 23:17:06.838 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:06.839 +02:00 [INF] 
+
+2019-10-28 23:17:06.839 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:06.840 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:06.840 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:06.841 +02:00 [INF] Executed page /_Host in 11.0617ms
+2019-10-28 23:17:06.842 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:06.842 +02:00 [INF] Request finished in 13.7674ms 200 text/html; charset=utf-8
+2019-10-28 23:17:06.881 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:06.881 +02:00 [INF] Request finished in 4941.7221ms 101 
+2019-10-28 23:17:06.883 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundarykgIodAjudTAcQVDd 359
+2019-10-28 23:17:06.886 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:06.908 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:06.908 +02:00 [INF] Request finished in 24.8975ms 200 
+2019-10-28 23:17:06.944 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:06.945 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:06.945 +02:00 [INF] Request finished in 1.7125000000000001ms 304 text/css
+2019-10-28 23:17:06.966 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:06.966 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:06.966 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:06.966 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:06.966 +02:00 [INF] Request finished in 0.7207ms 304 application/javascript
+2019-10-28 23:17:06.966 +02:00 [INF] Request finished in 0.659ms 304 text/css
+2019-10-28 23:17:06.983 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:06.983 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:06.983 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:06.983 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:06.983 +02:00 [INF] Request finished in 0.8732000000000001ms 304 text/css
+2019-10-28 23:17:06.984 +02:00 [INF] Request finished in 0.8106ms 304 text/css
+2019-10-28 23:17:07.047 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:07.047 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:07.048 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:07.048 +02:00 [INF] Request finished in 1.1793ms 200 application/json
+2019-10-28 23:17:07.100 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=sp8nJsCe2hpGTAx2I6yz-g  
+2019-10-28 23:17:07.100 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:07.105 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:07.105 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:07.105 +02:00 [INF] Request finished in 0.5925ms 304 application/font-woff
+2019-10-28 23:17:07.142 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/favicon.ico  
+2019-10-28 23:17:07.150 +02:00 [INF] 
+
+2019-10-28 23:17:07.150 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:07.150 +02:00 [INF] 
+
+2019-10-28 23:17:07.150 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:07.154 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:07.155 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\favicon.ico'
+2019-10-28 23:17:07.155 +02:00 [INF] Request finished in 13.6531ms 200 image/x-icon
+2019-10-28 23:17:07.156 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:10.090 +02:00 [INF] 
+
+2019-10-28 23:17:10.091 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:10.108 +02:00 [WRN] Response Result`1 end
+
+2019-10-28 23:17:34.517 +02:00 [INF] User profile is available. Using 'C:\Users\ZEPSENHOME\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2019-10-28 23:17:34.697 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:34.697 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:34.747 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:34.747 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:34.769 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:34.770 +02:00 [INF] Request finished in 75.4094ms 200 application/json
+2019-10-28 23:17:34.781 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=cjU1wL_qsy06WzTDPTOcxA  
+2019-10-28 23:17:34.782 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:34.787 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:34.803 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:34.806 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:34.939 +02:00 [INF] 
+
+2019-10-28 23:17:34.941 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:35.025 +02:00 [INF] 
+
+2019-10-28 23:17:35.025 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:35.228 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:35.228 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:35.280 +02:00 [INF] Executed page /_Host in 477.214ms
+2019-10-28 23:17:35.281 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:35.284 +02:00 [INF] Request finished in 590.1469000000001ms 200 text/html; charset=utf-8
+2019-10-28 23:17:35.449 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:35.456 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:35.459 +02:00 [INF] Request finished in 9.8328ms 304 text/css
+2019-10-28 23:17:35.470 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:35.470 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:35.470 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:35.470 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:35.471 +02:00 [INF] Request finished in 1.0253ms 304 text/css
+2019-10-28 23:17:35.471 +02:00 [INF] Request finished in 1.0414ms 304 application/javascript
+2019-10-28 23:17:35.487 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:35.487 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:35.487 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:35.487 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:35.487 +02:00 [INF] Request finished in 0.6910000000000001ms 304 text/css
+2019-10-28 23:17:35.487 +02:00 [INF] Request finished in 0.893ms 304 text/css
+2019-10-28 23:17:35.612 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:35.614 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:35.615 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:35.615 +02:00 [INF] Request finished in 3.1523000000000003ms 200 application/json
+2019-10-28 23:17:35.703 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=V-OPdMAGgzmOIHl71VsAxA  
+2019-10-28 23:17:35.703 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:35.707 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:35.708 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:35.708 +02:00 [INF] Request finished in 0.9153ms 304 application/font-woff
+2019-10-28 23:17:35.798 +02:00 [INF] 
+
+2019-10-28 23:17:35.798 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:35.803 +02:00 [INF] 
+
+2019-10-28 23:17:35.803 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:35.812 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:35.813 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:37.161 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryjBqRU6ie0w7pR60v 359
+2019-10-28 23:17:37.163 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:37.195 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:37.196 +02:00 [INF] Request finished in 35.7509ms 200 
+2019-10-28 23:17:37.197 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:37.197 +02:00 [INF] Request finished in 2415.5961ms 101 
+2019-10-28 23:17:41.438 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:41.439 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:41.440 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:41.442 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:41.443 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:41.450 +02:00 [INF] 
+
+2019-10-28 23:17:41.450 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:41.451 +02:00 [INF] 
+
+2019-10-28 23:17:41.451 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:41.452 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:41.452 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:41.453 +02:00 [INF] Executed page /_Host in 13.0038ms
+2019-10-28 23:17:41.453 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:41.454 +02:00 [INF] Request finished in 15.861ms 200 text/html; charset=utf-8
+2019-10-28 23:17:41.481 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:41.483 +02:00 [INF] Request finished in 5779.6742ms 101 
+2019-10-28 23:17:41.493 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundary6aBnFwglhOvAhcyG 359
+2019-10-28 23:17:41.493 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:41.504 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:41.504 +02:00 [INF] Request finished in 11.7878ms 200 
+2019-10-28 23:17:41.564 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:41.566 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:41.566 +02:00 [INF] Request finished in 2.1724ms 304 text/css
+2019-10-28 23:17:41.584 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:41.585 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:41.585 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:41.585 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:41.585 +02:00 [INF] Request finished in 0.6782ms 304 text/css
+2019-10-28 23:17:41.585 +02:00 [INF] Request finished in 0.6441ms 304 application/javascript
+2019-10-28 23:17:41.600 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:41.600 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:41.601 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:41.601 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:41.601 +02:00 [INF] Request finished in 0.5474ms 304 text/css
+2019-10-28 23:17:41.601 +02:00 [INF] Request finished in 0.5002ms 304 text/css
+2019-10-28 23:17:41.668 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:41.668 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:41.669 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:41.670 +02:00 [INF] Request finished in 2.0493ms 200 application/json
+2019-10-28 23:17:41.701 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:41.705 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:41.705 +02:00 [INF] Request finished in 3.9927ms 304 application/font-woff
+2019-10-28 23:17:41.717 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=GacFC-aDI1WxCfjvJgF96Q  
+2019-10-28 23:17:41.717 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:41.750 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/favicon.ico  
+2019-10-28 23:17:41.753 +02:00 [INF] 
+
+2019-10-28 23:17:41.753 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:41.754 +02:00 [INF] 
+
+2019-10-28 23:17:41.754 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:41.755 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:41.755 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:41.765 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\favicon.ico'
+2019-10-28 23:17:41.766 +02:00 [INF] Request finished in 15.0722ms 200 image/x-icon
+2019-10-28 23:17:42.988 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryDtqBbHdBdoI0yBU0 359
+2019-10-28 23:17:42.989 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:42.992 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:42.993 +02:00 [INF] Request finished in 5.0145ms 200 
+2019-10-28 23:17:43.000 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:43.000 +02:00 [INF] Request finished in 1283.4099ms 101 
+2019-10-28 23:17:45.315 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:45.317 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:45.318 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:45.321 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:45.322 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:45.331 +02:00 [INF] 
+
+2019-10-28 23:17:45.332 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:45.333 +02:00 [INF] 
+
+2019-10-28 23:17:45.333 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:45.335 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:45.335 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:45.337 +02:00 [INF] Executed page /_Host in 17.7442ms
+2019-10-28 23:17:45.337 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:45.337 +02:00 [INF] Request finished in 22.1751ms 200 text/html; charset=utf-8
+2019-10-28 23:17:45.513 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:45.514 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:45.514 +02:00 [INF] Request finished in 1.0255ms 304 text/css
+2019-10-28 23:17:45.536 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:45.537 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:45.537 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:45.537 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:45.537 +02:00 [INF] Request finished in 0.9509000000000001ms 304 text/css
+2019-10-28 23:17:45.537 +02:00 [INF] Request finished in 0.4368ms 304 application/javascript
+2019-10-28 23:17:45.558 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:45.558 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:45.558 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:45.558 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:45.558 +02:00 [INF] Request finished in 0.5823ms 304 text/css
+2019-10-28 23:17:45.558 +02:00 [INF] Request finished in 0.5529000000000001ms 304 text/css
+2019-10-28 23:17:45.687 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:45.689 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:45.690 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:45.690 +02:00 [INF] Request finished in 2.4762ms 200 application/json
+2019-10-28 23:17:45.739 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=Vr0PJg8ufDcGoKfMvdLwcA  
+2019-10-28 23:17:45.739 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:45.740 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:45.741 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:45.741 +02:00 [INF] Request finished in 0.9794ms 304 application/font-woff
+2019-10-28 23:17:45.786 +02:00 [INF] 
+
+2019-10-28 23:17:45.786 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:45.787 +02:00 [INF] 
+
+2019-10-28 23:17:45.788 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:45.789 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:45.790 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:49.784 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:49.785 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:49.786 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:49.786 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:49.787 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:49.791 +02:00 [INF] 
+
+2019-10-28 23:17:49.791 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:49.792 +02:00 [INF] 
+
+2019-10-28 23:17:49.792 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:49.793 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:49.793 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:49.795 +02:00 [INF] Executed page /_Host in 9.142100000000001ms
+2019-10-28 23:17:49.795 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:49.795 +02:00 [INF] Request finished in 11.991000000000001ms 200 text/html; charset=utf-8
+2019-10-28 23:17:49.809 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:49.809 +02:00 [INF] Request finished in 4070.4405ms 101 
+2019-10-28 23:17:49.827 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryBMNIfIkqjqxJGrSy 359
+2019-10-28 23:17:49.828 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:49.830 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:49.830 +02:00 [INF] Request finished in 3.0757000000000003ms 200 
+2019-10-28 23:17:49.877 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:49.877 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:49.878 +02:00 [INF] Request finished in 0.9939ms 304 text/css
+2019-10-28 23:17:49.895 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:49.896 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:49.896 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:49.896 +02:00 [INF] Request finished in 0.5913ms 304 text/css
+2019-10-28 23:17:49.896 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:49.896 +02:00 [INF] Request finished in 0.6216ms 304 application/javascript
+2019-10-28 23:17:49.907 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:49.908 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:49.908 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:49.908 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:49.908 +02:00 [INF] Request finished in 0.5376000000000001ms 304 text/css
+2019-10-28 23:17:49.908 +02:00 [INF] Request finished in 0.5042ms 304 text/css
+2019-10-28 23:17:49.994 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:49.995 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:49.995 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:49.995 +02:00 [INF] Request finished in 1.1938ms 200 application/json
+2019-10-28 23:17:50.003 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:50.003 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:50.003 +02:00 [INF] Request finished in 0.7753ms 304 application/font-woff
+2019-10-28 23:17:50.029 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=fSiVZk7NIWfLGOHSTXYJqg  
+2019-10-28 23:17:50.029 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:50.072 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/favicon.ico  
+2019-10-28 23:17:50.075 +02:00 [INF] 
+
+2019-10-28 23:17:50.075 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:50.076 +02:00 [INF] 
+
+2019-10-28 23:17:50.076 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:50.077 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\favicon.ico'
+2019-10-28 23:17:50.077 +02:00 [INF] Request finished in 4.776800000000001ms 200 image/x-icon
+2019-10-28 23:17:50.082 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:50.082 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:50.779 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:50.781 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:50.782 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:50.783 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:50.783 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:50.788 +02:00 [INF] 
+
+2019-10-28 23:17:50.789 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:50.790 +02:00 [INF] 
+
+2019-10-28 23:17:50.790 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:50.800 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:50.800 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:50.803 +02:00 [INF] Executed page /_Host in 20.9636ms
+2019-10-28 23:17:50.803 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:50.806 +02:00 [INF] Request finished in 27.594800000000003ms 200 text/html; charset=utf-8
+2019-10-28 23:17:50.818 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:50.818 +02:00 [INF] Request finished in 789.7936000000001ms 101 
+2019-10-28 23:17:50.838 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryQsaj0BWcAlFFwUVp 359
+2019-10-28 23:17:50.838 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:50.840 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:50.840 +02:00 [INF] Request finished in 2.1265ms 200 
+2019-10-28 23:17:50.886 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:50.887 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:50.887 +02:00 [INF] Request finished in 0.9672000000000001ms 304 text/css
+2019-10-28 23:17:50.902 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:50.902 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:50.903 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:50.903 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:50.903 +02:00 [INF] Request finished in 0.5409ms 304 text/css
+2019-10-28 23:17:50.903 +02:00 [INF] Request finished in 0.5075000000000001ms 304 application/javascript
+2019-10-28 23:17:50.916 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:50.916 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:50.916 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:50.916 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:50.916 +02:00 [INF] Request finished in 0.5064000000000001ms 304 text/css
+2019-10-28 23:17:50.916 +02:00 [INF] Request finished in 0.6416000000000001ms 304 text/css
+2019-10-28 23:17:50.971 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:50.971 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:50.972 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:50.972 +02:00 [INF] Request finished in 1.082ms 200 application/json
+2019-10-28 23:17:50.983 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:50.983 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:50.983 +02:00 [INF] Request finished in 0.8497ms 304 application/font-woff
+2019-10-28 23:17:50.996 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=KALpoK_-N4vnc7yH1ighfg  
+2019-10-28 23:17:50.997 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:51.024 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/favicon.ico  
+2019-10-28 23:17:51.026 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\favicon.ico'
+2019-10-28 23:17:51.026 +02:00 [INF] Request finished in 2.6083000000000003ms 200 image/x-icon
+2019-10-28 23:17:51.031 +02:00 [INF] 
+
+2019-10-28 23:17:51.031 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:51.032 +02:00 [INF] 
+
+2019-10-28 23:17:51.032 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:51.033 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:51.033 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:51.608 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:51.609 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:51.609 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:51.611 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:51.611 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:51.617 +02:00 [INF] 
+
+2019-10-28 23:17:51.617 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:51.618 +02:00 [INF] 
+
+2019-10-28 23:17:51.618 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:51.620 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:51.620 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:51.622 +02:00 [INF] Executed page /_Host in 12.8618ms
+2019-10-28 23:17:51.623 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:51.623 +02:00 [INF] Request finished in 15.3072ms 200 text/html; charset=utf-8
+2019-10-28 23:17:51.645 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:51.651 +02:00 [INF] Request finished in 649.3292ms 101 
+2019-10-28 23:17:51.666 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryA4H6pWLidcuZJYSf 359
+2019-10-28 23:17:51.667 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:51.669 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:51.670 +02:00 [INF] Request finished in 3.7124ms 200 
+2019-10-28 23:17:51.729 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:51.730 +02:00 [INF] The file /css/bootstrap/bootstrap.min.css was not modified
+2019-10-28 23:17:51.730 +02:00 [INF] Request finished in 0.9565ms 304 text/css
+2019-10-28 23:17:51.747 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:51.747 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:51.747 +02:00 [INF] The file /css/site.css was not modified
+2019-10-28 23:17:51.747 +02:00 [INF] The file /_framework/blazor.server.js was not modified
+2019-10-28 23:17:51.747 +02:00 [INF] Request finished in 0.6326ms 304 text/css
+2019-10-28 23:17:51.747 +02:00 [INF] Request finished in 0.5367000000000001ms 304 application/javascript
+2019-10-28 23:17:51.759 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:51.759 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:51.759 +02:00 [INF] The file /css/open-iconic/font/css/open-iconic-bootstrap.min.css was not modified
+2019-10-28 23:17:51.759 +02:00 [INF] The file /css/dark.css was not modified
+2019-10-28 23:17:51.759 +02:00 [INF] Request finished in 0.5425ms 304 text/css
+2019-10-28 23:17:51.759 +02:00 [INF] Request finished in 0.6559ms 304 text/css
+2019-10-28 23:17:51.816 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:51.816 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:51.818 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:51.818 +02:00 [INF] Request finished in 1.8758000000000001ms 200 application/json
+2019-10-28 23:17:51.833 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:51.834 +02:00 [INF] The file /css/open-iconic/font/fonts/open-iconic.woff was not modified
+2019-10-28 23:17:51.834 +02:00 [INF] Request finished in 0.5285000000000001ms 304 application/font-woff
+2019-10-28 23:17:51.846 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=lqM-oYiXSPdoqsO4U2vLZA  
+2019-10-28 23:17:51.846 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:51.874 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/favicon.ico  
+2019-10-28 23:17:51.876 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\favicon.ico'
+2019-10-28 23:17:51.876 +02:00 [INF] Request finished in 2.7675ms 200 image/x-icon
+2019-10-28 23:17:51.881 +02:00 [INF] 
+
+2019-10-28 23:17:51.881 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:51.883 +02:00 [INF] 
+
+2019-10-28 23:17:51.883 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:51.884 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:51.884 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:53.135 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/  
+2019-10-28 23:17:53.135 +02:00 [INF] Executing endpoint '/_Host'
+2019-10-28 23:17:53.136 +02:00 [INF] Route matched with {page = "/_Host"}. Executing page /_Host
+2019-10-28 23:17:53.137 +02:00 [INF] Executing an implicit handler method - ModelState is "Valid"
+2019-10-28 23:17:53.137 +02:00 [INF] Executed an implicit handler method, returned result Microsoft.AspNetCore.Mvc.RazorPages.PageResult.
+2019-10-28 23:17:53.141 +02:00 [INF] 
+
+2019-10-28 23:17:53.141 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:53.142 +02:00 [INF] 
+
+2019-10-28 23:17:53.142 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:53.143 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:53.144 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:53.145 +02:00 [INF] Executed page /_Host in 8.898200000000001ms
+2019-10-28 23:17:53.145 +02:00 [INF] Executed endpoint '/_Host'
+2019-10-28 23:17:53.146 +02:00 [INF] Request finished in 11.173300000000001ms 200 text/html; charset=utf-8
+2019-10-28 23:17:53.159 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:53.160 +02:00 [INF] Request finished in 1314.1132ms 101 
+2019-10-28 23:17:53.176 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryq9QNHBhhbdOh2cOD 359
+2019-10-28 23:17:53.177 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:53.178 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:53.178 +02:00 [INF] Request finished in 1.8765ms 200 
+2019-10-28 23:17:53.235 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/bootstrap/bootstrap.min.css  
+2019-10-28 23:17:53.240 +02:00 [INF] Sending file. Request path: '/css/bootstrap/bootstrap.min.css'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\css\bootstrap\bootstrap.min.css'
+2019-10-28 23:17:53.240 +02:00 [INF] Request finished in 4.6019000000000005ms 200 text/css
+2019-10-28 23:17:53.254 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/site.css  
+2019-10-28 23:17:53.254 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/_framework/blazor.server.js  
+2019-10-28 23:17:53.255 +02:00 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\css\site.css'
+2019-10-28 23:17:53.256 +02:00 [INF] Request finished in 1.3255000000000001ms 200 text/css
+2019-10-28 23:17:53.265 +02:00 [INF] Sending file. Request path: '/_framework/blazor.server.js'. Physical path: 'N/A'
+2019-10-28 23:17:53.265 +02:00 [INF] Request finished in 10.5603ms 200 application/javascript
+2019-10-28 23:17:53.279 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/css/open-iconic-bootstrap.min.css  
+2019-10-28 23:17:53.281 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/dark.css  
+2019-10-28 23:17:53.281 +02:00 [INF] Sending file. Request path: '/css/open-iconic/font/css/open-iconic-bootstrap.min.css'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\css\open-iconic\font\css\open-iconic-bootstrap.min.css'
+2019-10-28 23:17:53.281 +02:00 [INF] Request finished in 2.6136ms 200 text/css
+2019-10-28 23:17:53.282 +02:00 [INF] Sending file. Request path: '/css/dark.css'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\css\dark.css'
+2019-10-28 23:17:53.283 +02:00 [INF] Request finished in 1.5953000000000002ms 200 text/css
+2019-10-28 23:17:53.367 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/negotiate text/plain;charset=UTF-8 0
+2019-10-28 23:17:53.367 +02:00 [INF] Executing endpoint '/_blazor/negotiate'
+2019-10-28 23:17:53.368 +02:00 [INF] Executed endpoint '/_blazor/negotiate'
+2019-10-28 23:17:53.368 +02:00 [INF] Request finished in 1.7339ms 200 application/json
+2019-10-28 23:17:53.388 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/css/open-iconic/font/fonts/open-iconic.woff  
+2019-10-28 23:17:53.390 +02:00 [INF] Sending file. Request path: '/css/open-iconic/font/fonts/open-iconic.woff'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\css\open-iconic\font\fonts\open-iconic.woff'
+2019-10-28 23:17:53.390 +02:00 [INF] Request finished in 2.9675000000000002ms 200 application/font-woff
+2019-10-28 23:17:53.402 +02:00 [INF] Request starting HTTP/1.1 GET https://localhost:44368/_blazor?id=2PMKppNNFEQ0B_JXKLA7WQ  
+2019-10-28 23:17:53.402 +02:00 [INF] Executing endpoint '/_blazor'
+2019-10-28 23:17:53.437 +02:00 [INF] 
+
+2019-10-28 23:17:53.437 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:53.439 +02:00 [INF] 
+
+2019-10-28 23:17:53.439 +02:00 [WRN] Request Request begin
+2019-10-28 23:17:53.440 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:53.440 +02:00 [WRN] Response List`1 end
+
+2019-10-28 23:17:53.442 +02:00 [INF] Request starting HTTP/2.0 GET https://localhost:44368/favicon.ico  
+2019-10-28 23:17:53.443 +02:00 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\ZEPSENHOME\Source\Repos\KoreaApp\Korea\wwwroot\favicon.ico'
+2019-10-28 23:17:53.443 +02:00 [INF] Request finished in 1.1178000000000001ms 200 image/x-icon
+2019-10-28 23:17:54.397 +02:00 [INF] Request starting HTTP/2.0 POST https://localhost:44368/_blazor/disconnect multipart/form-data; boundary=----WebKitFormBoundaryyAKB5LBg3qqrbsSL 359
+2019-10-28 23:17:54.397 +02:00 [INF] Executing endpoint 'Blazor disconnect'
+2019-10-28 23:17:54.399 +02:00 [INF] Executed endpoint 'Blazor disconnect'
+2019-10-28 23:17:54.399 +02:00 [INF] Request finished in 2.7126ms 200 
+2019-10-28 23:17:54.459 +02:00 [INF] Executed endpoint '/_blazor'
+2019-10-28 23:17:54.460 +02:00 [INF] Request finished in 1057.6825000000001ms 101 
