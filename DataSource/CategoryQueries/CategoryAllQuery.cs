@@ -21,13 +21,13 @@ namespace Handlers
             public string Image { get; set; }
         }
 
-        //public class RequestValidator : AbstractValidator<Request>
-        //{
-        //    public RequestValidator()
-        //    {
-        //        RuleFor(x => x.Id).LessThan(1);                
-        //    }
-        //}
+        public class RequestValidator : AbstractValidator<Request>
+        {
+            public RequestValidator()
+            {
+                RuleFor(x => x.Id).GreaterThan(0);
+            }
+        }
 
         public class CategoryAllQueryHandler : Query, IRequestHandler<Request, List<Category>>
         {
