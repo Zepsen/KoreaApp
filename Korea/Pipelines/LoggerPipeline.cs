@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace Korea.Pipelines
 {
+    public interface ILog<TRequest, TResponse>
+    {
+        
+    }
+
+
     public class LoggerBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IRequest<TResponse>
+        where TRequest : IRequest<TResponse>, ILog<TRequest, TResponse>
     {
         public LoggerBehavior()
         {

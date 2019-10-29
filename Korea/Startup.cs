@@ -2,6 +2,7 @@ using FluentValidation;
 using Handlers;
 using Korea.Pipelines;
 using MediatR;
+using MediatR.Pipeline;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -33,10 +34,16 @@ namespace Korea
             
             //Register FluentValidation
             services.AddValidatorsFromAssemblies(new[] { domain });
-            
+
             //This is middleware for mediatr, the order is importnant
+            services.AddTransient(typeof(IRequestPreProcessor<>), typeof(TestPreBehavior<>));
+            
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggerBehavior<,>));            
-            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));            
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
+
+            services.AddTransient(typeof(IRequestPostProcessor<,>), typeof(TestPostBehavior<,>));
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
