@@ -17,11 +17,11 @@ namespace Korea.Pipelines
         public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
             Log.Information(Environment.NewLine);
-            Log.Warning(@"Request {0} begin", typeof(TRequest).Name);
+            Log.Warning(@"Request {0} begin", typeof(TRequest));
 
             var response = await next();
 
-            Log.Warning(@"Response {0} end" + Environment.NewLine, typeof(TResponse).Name);
+            Log.Warning(@"Response {0} end" + Environment.NewLine, typeof(TResponse));
 
             return response;
         }

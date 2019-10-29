@@ -30,7 +30,7 @@ namespace Handlers
         {
             public RequestValidator()
             {
-                RuleFor(x => x.CategoryId).GreaterThan(0);
+                RuleFor(x => x.CategoryId).GreaterThan(2);
             }
         }
 

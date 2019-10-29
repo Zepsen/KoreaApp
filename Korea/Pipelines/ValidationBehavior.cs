@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace Korea.Pipelines
 {
     public class ValidationBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-       where TRequest : IRequest<TResponse>
+        where TRequest : IRequest<TResponse>
     {
         private readonly IEnumerable<IValidator<TRequest>> _validators;
 
@@ -17,23 +17,24 @@ namespace Korea.Pipelines
             _validators = validators;
         }
 
-        public async Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
+        public Task<TResponse> Handle(TRequest request
+            , CancellationToken cancellationToken
+            , RequestHandlerDelegate<TResponse> next
+        )
         {
             var context = new ValidationContext(request);
-
             var failures = _validators
                 .Select(v => v.Validate(context))
                 .SelectMany(result => result.Errors)
                 .Where(f => f != null)
                 .ToList();
 
-            if (failures.Count != 0)
+            if (failures.Any())
             {
                 throw new ValidationException(failures);
             }
 
-            return await next();
+            return next();
         }
-
     }
 }
