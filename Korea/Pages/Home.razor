@@ -1,6 +1,8 @@
 @page "/" 
 @inherits Page
 
+@using Handlers.Services;
+@inject IAuthService authService;
 <div class="row">
     <b>@users.Count</b>
 	@foreach (var category in categories)
@@ -38,6 +40,9 @@
     {
         try
         {
+            var jwt = authService.GenerateToken("test@email.com");
+            var token = authService.Validate(jwt + "asdas dasd asd asd asd a");
+
             var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());            
 
             await Task.WhenAll(categoriesTask);
