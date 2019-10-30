@@ -36,12 +36,12 @@ namespace Korea
             services.AddValidatorsFromAssemblies(new[] { domain });
 
             //This is middleware for mediatr, the order is importnant
-            services.AddTransient(typeof(IRequestPreProcessor<>), typeof(TestPreBehavior<>));
+            services.AddTransient(typeof(IRequestPreProcessor<>), typeof(PreProcessorBehavior<>));
             
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggerBehavior<,>));            
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
-            services.AddTransient(typeof(IRequestPostProcessor<,>), typeof(TestPostBehavior<,>));
+            services.AddTransient(typeof(IRequestPostProcessor<,>), typeof(PostProcessorBehavior<,>));
 
 
         }

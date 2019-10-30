@@ -38,13 +38,12 @@
     {
         try
         {
-            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());
-            var usersTask = mediator.Send<List<UserAllQuery.User>>(new UserAllQuery.Request());
+            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());            
 
-            await Task.WhenAll(categoriesTask, usersTask);
+            await Task.WhenAll(categoriesTask);
             
             categories = categoriesTask.Result;
-            users = usersTask.Result;
+            
         }
         catch (Exception ex)
         {
