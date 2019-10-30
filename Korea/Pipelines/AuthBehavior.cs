@@ -2,6 +2,8 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Handlers.Visitors;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Korea.Pipelines
 {
@@ -9,11 +11,13 @@ namespace Korea.Pipelines
         where TRequest : IRequest<TResponse>
         //IBaseRequest<TResponse>
     {
-        private readonly IVisitor _service;
+        //private readonly IVisitor<TRequest> _service;
+        private readonly IEnumerable<IVisitor<TRequest>> _services;
 
-        public AuthBehavior(IVisitor service)
+        public AuthBehavior(IEnumerable<IVisitor<TRequest>> visitors)
         {
-            this._service = service;
+            //this._service = service;
+            this._services = visitors;
         }
 
         public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next
@@ -22,8 +26,9 @@ namespace Korea.Pipelines
             try
             {
                 //this.service.Validate(request.Token);
-                _service.Allow();
-
+                //_service.Allow();
+                var a = _services.FirstOrDefault();
+                
                 return next();
             } catch (System.Exception)
             {

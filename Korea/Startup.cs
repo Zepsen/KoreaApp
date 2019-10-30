@@ -3,6 +3,7 @@ using FluentValidation;
 using Handlers;
 using Handlers.Services;
 using Handlers.Visitors;
+using Korea.Infrastructure.Extensions;
 using Korea.Pipelines;
 using MediatR;
 using MediatR.Pipeline;
@@ -64,8 +65,11 @@ namespace Korea
 
             //This is middleware for mediatr, the order is importnant
 
-            services.AddTransient(typeof(IVisitor), typeof(Auth));
+            //services.AddTransient(typeof(IVisitor<>), typeof(BaseVisitor<>));
             //services.AddTransient(typeof(IVisitor<>), typeof(Auth<>));
+
+            services.RegisterAllTypes(typeof(IVisitor<>), new[] { domain });
+            //services.RegisterAllTypes<IVisitor>(new[] { domain });
 
             services.AddTransient(typeof(IRequestPreProcessor<>), typeof(PreProcessorBehavior<>));
                         

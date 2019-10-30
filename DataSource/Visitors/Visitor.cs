@@ -10,8 +10,13 @@
         bool Allow();
     }
 
-    public abstract class BaseVisitor<T> : IVisitor<T>
-    {
-        public abstract bool Allow();        
-    }
+    //public class BaseVisitor<T> : IVisitor<T>
+    //{
+    //    protected bool AllowAnonymous { get; set; } = false;
+        
+    //    public bool Allow()
+    //    {
+    //        return this.AllowAnonymous;
+    //    }
+    //}
 }

@@ -30,8 +30,8 @@ namespace Handlers
             }
         }
 
-        public class Auth : IVisitor
-        {
+        public class Auth<Request> : IVisitor<Request>
+        {            
             public bool Allow()
             {
                 return true;
