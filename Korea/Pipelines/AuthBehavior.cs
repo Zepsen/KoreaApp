@@ -11,14 +11,12 @@ namespace Korea.Pipelines
         where TRequest : IRequest<TResponse>
         //IBaseRequest<TResponse>
     {
-        //private readonly IVisitor<TRequest> _service;
-        private readonly IEnumerable<IVisitor<TRequest>> _services;
-
-        public AuthBehavior(IEnumerable<IVisitor<TRequest>> visitors)
-        {
-            //this._service = service;
-            this._services = visitors;
-        }
+        //private readonly IVisitor<TRequest> _visitor;
+        
+        //public AuthBehavior(IVisitor<TRequest> visitor)
+        //{
+        //    _visitor = visitor;
+        //}
 
         public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next
         )
@@ -26,9 +24,11 @@ namespace Korea.Pipelines
             try
             {
                 //this.service.Validate(request.Token);
-                //_service.Allow();
-                var a = _services.FirstOrDefault();
-                
+                //new VisitorBorker(new Handlers.CategoryAllQuery.Auth()).Visit();
+                var gen = GenericFactory.CreateGeneric<TRequest>();
+                gen.Process();
+
+
                 return next();
             } catch (System.Exception)
             {

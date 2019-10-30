@@ -1,6 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation;
+using Handlers.Visitors;
 using MediatR;
 using SharedModels;
 
@@ -33,6 +34,8 @@ namespace Handlers
                 RuleFor(x => x.CategoryId).GreaterThan(0);
             }
         }
+
+       
 
         public class GoodsByCategoryQueryHandler : Query, IRequestHandler<Request, Result<Good>>
         {

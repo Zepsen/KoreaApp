@@ -11,7 +11,7 @@ namespace Handlers
     {
         public class Request : IRequest<List<Category>>
         {
-            public int Id { get; set; }            
+            public int Id { get; set; }
         }
 
         public class Category
@@ -30,13 +30,22 @@ namespace Handlers
             }
         }
 
-        public class Auth<Request> : IVisitor<Request>
-        {            
-            public bool Allow()
+        public class Auth : IVisitor
+        {
+            public bool Allow(IVisitor visitor)
             {
-                return true;
+                return false;
             }
         }
+
+        public class AuthGen : IGeneric<Request>
+        {
+            public void Process()
+            {
+                throw new System.NotImplementedException();
+            }
+        }
+
 
         public class CategoryAllQueryHandler : Query, IRequestHandler<Request, List<Category>>
         {
