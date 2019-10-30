@@ -37,7 +37,7 @@ namespace Handlers
 
         public class Authorization : IAuthorizationConfig<Request>
         {
-            public bool AllowAnonymous() => false;
+            public bool AllowAnonymous() => true;
         }
 
         public class GoodsByCategoryQueryHandler : Query, IRequestHandler<Request, Result<Good>>
