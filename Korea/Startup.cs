@@ -2,6 +2,7 @@ using Blazored.LocalStorage;
 using FluentValidation;
 using Handlers;
 using Handlers.Services;
+using Handlers.Visitors;
 using Korea.Pipelines;
 using MediatR;
 using MediatR.Pipeline;
@@ -14,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
+using static Handlers.CategoryAllQuery;
 
 namespace Korea
 {
@@ -38,7 +40,10 @@ namespace Korea
             services.AddServerSideBlazor();
 
             services.AddTransient<IAuthService, AuthService>();
+
+
             services.AddBlazoredLocalStorage();
+
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
@@ -58,6 +63,10 @@ namespace Korea
             services.AddValidatorsFromAssemblies(new[] { domain });
 
             //This is middleware for mediatr, the order is importnant
+
+            services.AddTransient(typeof(IVisitor), typeof(Auth));
+            //services.AddTransient(typeof(IVisitor<>), typeof(Auth<>));
+
             services.AddTransient(typeof(IRequestPreProcessor<>), typeof(PreProcessorBehavior<>));
                         
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthBehavior<,>));

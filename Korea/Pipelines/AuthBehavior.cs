@@ -1,19 +1,19 @@
-﻿using Handlers.Services;
-using MediatR;
+﻿using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
-using Handlers;
+using Handlers.Visitors;
 
 namespace Korea.Pipelines
 {
     public class AuthBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IBaseRequest<TResponse>
+        where TRequest : IRequest<TResponse>
+        //IBaseRequest<TResponse>
     {
-        private readonly IAuthService service;
+        private readonly IVisitor _service;
 
-        public AuthBehavior(IAuthService service)
+        public AuthBehavior(IVisitor service)
         {
-            this.service = service;
+            this._service = service;
         }
 
         public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next
@@ -22,6 +22,8 @@ namespace Korea.Pipelines
             try
             {
                 //this.service.Validate(request.Token);
+                _service.Allow();
+
                 return next();
             } catch (System.Exception)
             {

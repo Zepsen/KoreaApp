@@ -6,7 +6,6 @@
 
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
 <div class="row">
-    <b>@users.Count</b>
     @foreach (var category in categories)
     {
         <div class="col-sm-12 col-md-6 col-lg-3 p-1">
@@ -36,16 +35,15 @@
     }
 
     private List<CategoryAllQuery.Category> categories = new List<CategoryAllQuery.Category>();
-    private List<UserAllQuery.User> users = new List<UserAllQuery.User>();
 
     protected override async Task OnInitializedAsync()
     {
         try
         {
-            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request()
-            {
-                Token = await localStorage.GetItemAsync<string>("token") ?? "test@email.com"
-            });
+            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());
+            //{
+            //    Token = await localStorage.GetItemAsync<string>("token") ?? "test@email.com"
+            //});
 
             await Task.WhenAll(categoriesTask);
 

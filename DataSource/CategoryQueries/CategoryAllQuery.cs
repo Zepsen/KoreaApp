@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using Handlers.Visitors;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;
@@ -8,7 +9,7 @@ namespace Handlers
 {
     public class CategoryAllQuery
     {
-        public class Request : BaseRequest<List<Category>>
+        public class Request : IRequest<List<Category>>
         {
             public int Id { get; set; }            
         }
@@ -26,6 +27,14 @@ namespace Handlers
             public RequestValidator()
             {
                 RuleFor(x => x.Id).GreaterThan(-1);
+            }
+        }
+
+        public class Auth : IVisitor
+        {
+            public bool Allow()
+            {
+                return true;
             }
         }
 
