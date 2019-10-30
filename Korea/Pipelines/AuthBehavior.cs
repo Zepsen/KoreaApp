@@ -1,18 +1,16 @@
 ﻿using MediatR;
 using System.Threading;
 using System.Threading.Tasks;
-using Handlers.Visitors;
-using System.Collections.Generic;
-using System.Linq;
+using Handlers.Core;
 
 namespace Korea.Pipelines
 {
     public class AuthBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
         where TRequest : IRequest<TResponse>        
     {
-        private readonly IGeneric<TRequest> generic;
+        private readonly IAuthorizationConfig<TRequest> generic;
 
-        public AuthBehavior(IGeneric<TRequest> generic)
+        public AuthBehavior(IAuthorizationConfig<TRequest> generic)
         {
             this.generic = generic;
         }
@@ -25,9 +23,12 @@ namespace Korea.Pipelines
             {
                 //var generic = GenericFactory.CreateGeneric<TRequest>();
                 //generic.Process();
-                generic.Process();
-
-                return next();
+                if (generic.AllowAnonymous())
+                {
+                    return next();
+                }
+                else throw new System.Exception("Not allow");
+                
             } catch (System.Exception)
             {
                 throw;

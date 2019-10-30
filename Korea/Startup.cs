@@ -1,8 +1,8 @@
 using Blazored.LocalStorage;
 using FluentValidation;
 using Handlers;
+using Handlers.Core;
 using Handlers.Services;
-using Handlers.Visitors;
 using Korea.Infrastructure.Extensions;
 using Korea.Pipelines;
 using MediatR;
@@ -16,7 +16,6 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Reflection;
 using System.Text;
-using static Handlers.CategoryAllQuery;
 
 namespace Korea
 {
@@ -65,7 +64,7 @@ namespace Korea
 
             //This is middleware for mediatr, the order is importnant
 
-            services.RegisterAllTypes(typeof(IGeneric<>), new[] { domain });
+            services.RegisterAllTypes(typeof(IAuthorizationConfig<>), new[] { domain });
 
             services.AddTransient(typeof(IRequestPreProcessor<>), typeof(PreProcessorBehavior<>));
                         

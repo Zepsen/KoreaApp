@@ -1,7 +1,7 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using FluentValidation;
-using Handlers.Visitors;
+using Handlers.Core;
 using MediatR;
 using SharedModels;
 
@@ -35,7 +35,10 @@ namespace Handlers
             }
         }
 
-       
+        public class Authorization : IAuthorizationConfig<Request>
+        {
+            public bool AllowAnonymous() => false;
+        }
 
         public class GoodsByCategoryQueryHandler : Query, IRequestHandler<Request, Result<Good>>
         {

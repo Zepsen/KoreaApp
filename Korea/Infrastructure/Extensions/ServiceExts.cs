@@ -1,5 +1,4 @@
-﻿using Handlers.Visitors;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using System.Reflection;
@@ -14,14 +13,14 @@ namespace Korea.Infrastructure.Extensions
             ServiceLifetime lifetime = ServiceLifetime.Transient)
         {
             var typesFromAssemblies = assemblies.SelectMany(a => a.DefinedTypes
-                    .Where(x => x.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == t)));
+                    .Where(x => x.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == t))).ToList();
                         
             foreach (var type in typesFromAssemblies)
             {
                 var inType = type.ImplementedInterfaces.FirstOrDefault().GetGenericArguments().FirstOrDefault();
                 //GenericFactory.Register(inType, type);
-                t = t.MakeGenericType(inType);
-                services.Add(new ServiceDescriptor(t, type, lifetime));
+                var genT = t.MakeGenericType(inType);
+                services.Add(new ServiceDescriptor(genT, type, lifetime));
             }
 
 

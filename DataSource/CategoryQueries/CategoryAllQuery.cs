@@ -1,5 +1,5 @@
 ﻿using FluentValidation;
-using Handlers.Visitors;
+using Handlers.Core;
 using MediatR;
 using System.Collections.Generic;
 using System.Threading;
@@ -30,12 +30,9 @@ namespace Handlers
             }
         }
         
-        public class AuthGen : IGeneric<Request>
+        public class Authorization : IAuthorizationConfig<Request>
         {
-            public void Process()
-            {
-                throw new System.NotImplementedException();
-            }
+            public bool AllowAnonymous() => true;            
         }
 
 

@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Handlers.Visitors
+namespace Handlers.Core
 {   
-
+    /// <summary>
+    /// Do not delete, example
+    /// First register in services by Interface<T> 
+    /// </summary>
     public static class GenericFactory
     {
         private static Dictionary<Type, Type> registeredTypes = new Dictionary<Type, Type>();
@@ -13,20 +16,20 @@ namespace Handlers.Visitors
             registeredTypes.Add(t, t2);
         }
 
-        public static IGeneric<T> CreateGeneric<T>()
+        public static IAuthorizationConfig<T> CreateGeneric<T>()
         {
             var t = typeof(T);
             if (registeredTypes.ContainsKey(t) == false) throw new NotSupportedException();
 
             var typeToCreate = registeredTypes[t];
-            return Activator.CreateInstance(typeToCreate, true) as IGeneric<T>;
+            return Activator.CreateInstance(typeToCreate, true) as IAuthorizationConfig<T>;
         }
 
     }
 
-    public interface IGeneric<T>
+    public interface IAuthorizationConfig<T>
     {       
-        void Process();
+        bool AllowAnonymous();
     }
 
     
