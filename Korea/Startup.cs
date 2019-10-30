@@ -1,3 +1,4 @@
+using Blazored.LocalStorage;
 using FluentValidation;
 using Handlers;
 using Handlers.Services;
@@ -37,7 +38,7 @@ namespace Korea
             services.AddServerSideBlazor();
 
             services.AddTransient<IAuthService, AuthService>();
-
+            services.AddBlazoredLocalStorage();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
