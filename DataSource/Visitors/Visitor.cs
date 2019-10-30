@@ -1,33 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using static Handlers.CategoryAllQuery;
 
 namespace Handlers.Visitors
-{
-    public interface IVisitor
-    {
-        bool Allow(IVisitor visitor);
-    }
-    public class VisitorBorker
-    {
-        private readonly IVisitor visitor;
-
-        public VisitorBorker(IVisitor visitor)
-        {
-            this.visitor = visitor;
-        }
-
-        public bool Visit()
-        {
-            return this.visitor.Allow(visitor);
-        }
-    }
-
-
-    public interface IVisitor<T>
-    {
-        bool Allow(T visitor);
-    }
+{   
 
     public static class GenericFactory
     {

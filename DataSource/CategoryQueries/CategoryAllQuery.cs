@@ -29,15 +29,7 @@ namespace Handlers
                 RuleFor(x => x.Id).GreaterThan(-1);
             }
         }
-
-        public class Auth : IVisitor
-        {
-            public bool Allow(IVisitor visitor)
-            {
-                return false;
-            }
-        }
-
+        
         public class AuthGen : IGeneric<Request>
         {
             public void Process()
