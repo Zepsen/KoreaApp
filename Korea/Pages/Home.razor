@@ -1,34 +1,36 @@
-@page "/" 
+@page "/"
 @inherits Page
 
 @using Handlers.Services;
 @inject IAuthService authService;
+
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
 <div class="row">
     <b>@users.Count</b>
-	@foreach (var category in categories)
-	{
-		<div class="col-sm-12 col-md-6 col-lg-3 p-1">
-			<div class="card shadow-sm pointer">
-				<img src="@category.Image" class="card-img-top" alt="@category.Title">
-				<div class="card-body">
-					<h5 class="card-title">@category.Title</h5>
-					<p class="card-text">@category.Description</p>					
-					<NavLink class="btn btn-default" href="@GetUrl(category.Id)" Match="NavLinkMatch.All">
-                		Go to
-            		</NavLink>
-					<!-- <a href="#" class="btn btn-outline-info">Go to</a> -->
-				</div>
-			</div>
-		</div>
-	}
+    @foreach (var category in categories)
+    {
+        <div class="col-sm-12 col-md-6 col-lg-3 p-1">
+            <div class="card shadow-sm pointer">
+                <img src="@category.Image" class="card-img-top" alt="@category.Title">
+                <div class="card-body">
+                    <h5 class="card-title">@category.Title</h5>
+                    <p class="card-text">@category.Description</p>
+                    <NavLink class="btn btn-default" href="@GetUrl(category.Id)" Match="NavLinkMatch.All">
+                        Go to
+                    </NavLink>
+                    <!-- <a href="#" class="btn btn-outline-info">Go to</a> -->
+                </div>
+            </div>
+        </div>
+    }
 </div>
 
-@code 
+@code
 {
     protected override void Breadcrumbs()
     {
         BasePage.AddBreadcrump(new List<Breadcrumb>
-        {
+    {
             new Breadcrumb { Name = "Categories", Active = true } ,
         });
     }
@@ -40,17 +42,19 @@
     {
         try
         {
-            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());            
+            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request()
+            {
+                Token = await localStorage.GetItemAsync<string>("token") ?? "test@email.com"
+            });
 
             await Task.WhenAll(categoriesTask);
-            
+
             categories = categoriesTask.Result;
-            
-        }
-        catch (Exception ex)
+
+        } catch (Exception ex)
         {
             await BasePage.ShowError(ex.Message);
-        }        
+        }
     }
 
     private string GetUrl(int id)

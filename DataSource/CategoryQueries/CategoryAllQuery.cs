@@ -8,9 +8,9 @@ namespace Handlers
 {
     public class CategoryAllQuery
     {
-        public class Request : IRequest<List<Category>>
+        public class Request : BaseRequest<List<Category>>
         {
-            public int Id { get; set; }
+            public int Id { get; set; }            
         }
 
         public class Category

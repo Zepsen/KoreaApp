@@ -59,7 +59,8 @@ namespace Korea
 
             //This is middleware for mediatr, the order is importnant
             services.AddTransient(typeof(IRequestPreProcessor<>), typeof(PreProcessorBehavior<>));
-            
+                        
+            services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthBehavior<,>));
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggerBehavior<,>));            
             services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
 
