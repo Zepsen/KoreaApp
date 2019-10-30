@@ -18,12 +18,10 @@ namespace Korea.Infrastructure.Extensions
                         
             foreach (var type in typesFromAssemblies)
             {
-                GenericFactory.Register(
-                    type.ImplementedInterfaces.FirstOrDefault().GetGenericArguments().FirstOrDefault()
-                    , type);
-
-
-                //services.Add(new ServiceDescriptor(t, type, lifetime));
+                var inType = type.ImplementedInterfaces.FirstOrDefault().GetGenericArguments().FirstOrDefault();
+                //GenericFactory.Register(inType, type);
+                t = t.MakeGenericType(inType);
+                services.Add(new ServiceDescriptor(t, type, lifetime));
             }
 
 
