@@ -7,7 +7,7 @@ namespace Handlers
         string Token { get; set; }
     }
 
-    public abstract class BaseRequest<Request> : IBaseRequest<Request>
+    public abstract class BaseRequest
     {
         public string Token { get; set; }
     }

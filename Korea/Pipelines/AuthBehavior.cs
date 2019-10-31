@@ -11,7 +11,7 @@ using Handlers;
 namespace Korea.Pipelines
 {
     public class AuthBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IBaseRequest<TResponse>     
+        where TRequest : IRequest<TResponse>     
     {
         private readonly IAuthorizationConfig<TRequest> _auth;
         private readonly IAuthService _authService;
@@ -30,9 +30,9 @@ namespace Korea.Pipelines
                 //Do not need auth
                 if (_auth?.Allow() ?? true) return next();
                 else 
-                {
-                    var token = _authService.Validate(request.Token);
-                    throw new Exception("Not allow");                                       
+                {                    
+                    _auth.Check(request as BaseRequest);
+                    return next();
                 }
                 
             } catch (Exception ex)

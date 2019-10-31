@@ -30,6 +30,7 @@ namespace Handlers.Core
     public interface IAuthorizationConfig<T>
     {       
         bool Allow();
+        void Check(BaseRequest request);
     }
 
     public abstract class AbstractAuthorization<T> : IAuthorizationConfig<T>
@@ -46,6 +47,11 @@ namespace Handlers.Core
         public bool IsInRole(string role)
         {
             return _roles.Contains(role);
+        }
+
+        public void Check(BaseRequest request)
+        {
+            var a = request?.Token;
         }
     }
 }
