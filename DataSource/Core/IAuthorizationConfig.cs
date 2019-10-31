@@ -31,6 +31,7 @@ namespace Handlers.Core
     {       
         bool Allow();
         void Check(BaseRequest request);
+        void Check(IBaseRequest<T> request);
     }
 
     public abstract class AbstractAuthorization<T> : IAuthorizationConfig<T>
@@ -53,5 +54,10 @@ namespace Handlers.Core
         {
             var a = request?.Token;
         }
+        public void Check(IBaseRequest<T> request)
+        {
+            var a = request?.Token;
+        }
+
     }
 }
