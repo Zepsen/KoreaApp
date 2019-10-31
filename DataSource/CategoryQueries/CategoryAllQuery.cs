@@ -9,9 +9,10 @@ namespace Handlers
 {
     public class CategoryAllQuery
     {
-        public class Request : IRequest<List<Category>>
+        public class Request : IBaseRequest<List<Category>>
         {
             public int Id { get; set; }
+            public string Token { get; set; }
         }
 
         public class Category
@@ -32,7 +33,10 @@ namespace Handlers
         
         public class Authorization : AbstractAuthorization<Request>
         {
-            public override bool AllowAnonymous() => true;            
+            public Authorization()
+            {                
+                AddRoles(new List<string> { "Admin", "User" });                
+            }
         }
 
 

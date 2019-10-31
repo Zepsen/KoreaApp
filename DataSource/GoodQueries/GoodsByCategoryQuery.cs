@@ -37,7 +37,10 @@ namespace Handlers
 
         public class Authorization : AbstractAuthorization<Request>
         {
-            public override bool AllowAnonymous() => true;
+            public Authorization()
+            {
+                AllowAnonymous();
+            }
         }
 
         public class GoodsByCategoryQueryHandler : Query, IRequestHandler<Request, Result<Good>>

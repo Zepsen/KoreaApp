@@ -5,33 +5,39 @@ using Handlers.Core;
 using System.Collections.Generic;
 using System.Linq;
 using System;
+using Handlers.Services;
+using Handlers;
 
 namespace Korea.Pipelines
 {
     public class AuthBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IRequest<TResponse>        
+        where TRequest : IBaseRequest<TResponse>     
     {
-        private readonly IEnumerable<IAuthorizationConfig<TRequest>> _auth;
+        private readonly IAuthorizationConfig<TRequest> _auth;
+        private readonly IAuthService _authService;
 
-        public AuthBehavior(IEnumerable<IAuthorizationConfig<TRequest>> auth)
+        public AuthBehavior(IEnumerable<IAuthorizationConfig<TRequest>> auth, IAuthService authService)
         {
-            _auth = auth;
+            _auth = auth.FirstOrDefault();
+            _authService = authService;
         }
 
 
         public Task<TResponse> Handle(TRequest request, CancellationToken cancellationToken, RequestHandlerDelegate<TResponse> next)
         {
             try
-            {                   
-                if (_auth.FirstOrDefault()?.AllowAnonymous() ?? true)
+            {
+                //Do not need auth
+                if (_auth?.Allow() ?? true) return next();
+                else 
                 {
-                    return next();
+                    var token = _authService.Validate(request.Token);
+                    throw new Exception("Not allow");                                       
                 }
-                else throw new Exception("Not allow");
                 
             } catch (Exception ex)
             {
-                throw ex;
+                throw;
             }            
         }
     }

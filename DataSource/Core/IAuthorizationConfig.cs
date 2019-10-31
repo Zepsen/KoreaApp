@@ -29,14 +29,23 @@ namespace Handlers.Core
 
     public interface IAuthorizationConfig<T>
     {       
-        bool AllowAnonymous();
+        bool Allow();
     }
 
     public abstract class AbstractAuthorization<T> : IAuthorizationConfig<T>
     {
-        public virtual bool AllowAnonymous()
+        private bool _allowAnonymous = false;
+        private List<string> _roles = new List<string>();
+
+        protected void AllowAnonymous() => _allowAnonymous = true;
+        protected void AddRole(string role) => _roles.Add(role);
+        protected void AddRoles(List<string> roles) => _roles.AddRange(roles);
+
+        public bool Allow() => _allowAnonymous;
+        
+        public bool IsInRole(string role)
         {
-            return false;
+            return _roles.Contains(role);
         }
     }
 }

@@ -40,10 +40,10 @@
     {
         try
         {
-            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request());
-            //{
-            //    Token = await localStorage.GetItemAsync<string>("token") ?? "test@email.com"
-            //});
+            var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request()
+            {
+                Token = await localStorage.GetItemAsync<string>("token") ?? "test@email.com"
+            });
 
             await Task.WhenAll(categoriesTask);
 
