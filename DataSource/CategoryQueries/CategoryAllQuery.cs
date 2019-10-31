@@ -30,9 +30,9 @@ namespace Handlers
             }
         }
         
-        public class Authorization : IAuthorizationConfig<Request>
+        public class Authorization : AbstractAuthorization<Request>
         {
-            public bool AllowAnonymous() => true;            
+            public override bool AllowAnonymous() => true;            
         }
 
 

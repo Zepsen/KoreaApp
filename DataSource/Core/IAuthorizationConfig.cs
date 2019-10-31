@@ -32,5 +32,11 @@ namespace Handlers.Core
         bool AllowAnonymous();
     }
 
-    
+    public abstract class AbstractAuthorization<T> : IAuthorizationConfig<T>
+    {
+        public virtual bool AllowAnonymous()
+        {
+            return false;
+        }
+    }
 }

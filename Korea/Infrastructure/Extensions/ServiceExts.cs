@@ -12,19 +12,20 @@ namespace Korea.Infrastructure.Extensions
             Assembly[] assemblies,
             ServiceLifetime lifetime = ServiceLifetime.Transient)
         {
-            var typesFromAssemblies = assemblies.SelectMany(a => a.DefinedTypes
-                    .Where(x => x.GetInterfaces().Any(i => i.IsGenericType && i.GetGenericTypeDefinition() == t))).ToList();
-                        
-            foreach (var type in typesFromAssemblies)
+            foreach (var type in assemblies.SelectMany(i => i.DefinedTypes).Where(t => t.IsClass && !t.IsAbstract))
             {
-                var inType = type.ImplementedInterfaces.FirstOrDefault().GetGenericArguments().FirstOrDefault();
-                //GenericFactory.Register(inType, type);
-                var genT = t.MakeGenericType(inType);
-                services.Add(new ServiceDescriptor(genT, type, lifetime));
+                foreach (var i in type.GetInterfaces())
+                {
+                    if (i.IsGenericType && i.GetGenericTypeDefinition() == t)
+                    {                        
+                        var interfaceType = t.MakeGenericType(i.GetGenericArguments());
+                        services.AddTransient(interfaceType, type);
+                        services.Add(new ServiceDescriptor(interfaceType, type, lifetime));
+                    }
+                }
             }
-
-
         }
+              
 
         public static void RegisterAllTypes<T>(this IServiceCollection services, 
             Assembly[] assemblies,
