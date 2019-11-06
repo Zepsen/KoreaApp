@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -46,12 +47,19 @@ namespace Korea
 
             services.AddBlazoredLocalStorage();
 
-            
+            //Custom provider auth
             services.AddScoped<AuthenticationStateProvider, FakeAuthenticationStateProvider>();
 
+            //Cookie auth
             //services.AddHttpContextAccessor();
+            //services.Configure<CookiePolicyOptions>(options =>
+            //{
+            //    options.CheckConsentNeeded = context => true;
+            //    options.MinimumSameSitePolicy = SameSiteMode.None;
+            //});            
             //services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
-            
+
+            //Token auth
             //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             //    .AddJwtBearer(options =>
             //    {
@@ -105,8 +113,10 @@ namespace Korea
 
             app.UseRouting();
 
+            //Cookies auth
+            app.UseCookiePolicy();
             app.UseAuthentication();
-            app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints =>
             {

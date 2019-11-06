@@ -19,18 +19,29 @@ namespace Handlers.Services
     {
         string GenerateToken(string email);
 
+
         JwtSecurityToken Validate(string jwt);
+
+
+        Task LoginForCookie(string email, string name);
+        Task LogoutForCookie();
+        bool IsAuth();
     }
 
     public class AuthService : IAuthService
     {
-
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public AuthService(IConfiguration configuration)
+        public AuthService(IConfiguration configuration,
+            IHttpContextAccessor httpContextAccessor
+            )
         {
-            _configuration = configuration;            
+            _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
         }
+
+        //Token
 
         public string GenerateToken(string email)
         {
@@ -103,65 +114,55 @@ namespace Handlers.Services
 
         //Cookies
 
-        //public async Task<bool> Login(string userName, string password)
-        //{
-        //    if (ValidateLogin(userName, password))
-        //    {
-        //        var claims = new List<Claim>
-        //        {
-        //            new Claim("user", userName),
-        //            new Claim("role", "Member")
-        //        };
+        public async Task LoginForCookie(string email, string name)
+        {
+            var claims = new List<Claim>
+{
+                new Claim(ClaimTypes.Email, email),
+                new Claim(ClaimTypes.Name, name),
+                new Claim(ClaimTypes.Role, "User"),
+            };
 
-        //        await HttpContext.SignInAsync(new ClaimsPrincipal(new ClaimsIdentity(claims, "Cookies", "user", "role")));
-        //        return true;
-        //    } else return false;            
-        //}
+            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+            var authProperties = new AuthenticationProperties
+            {
+                //AllowRefresh = <bool>,
+                // Refreshing the authentication session should be allowed.
 
-        //private bool ValidateLogin(string userName, string password)
-        //{
-        //    return true;
-        //}
+                ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
+                // The time at which the authentication ticket expires. A 
+                // value set here overrides the ExpireTimeSpan option of 
+                // CookieAuthenticationOptions set with AddCookie.
 
-//        public async Task Login(AppUser user)
-//        {
-//            var claims = new List<Claim>
-//{
-//                new Claim(ClaimTypes.Name, user.Email),
-//                new Claim("FullName", user.Name),
-//                new Claim(ClaimTypes.Role, "Administrator"),
-//            };
+                IsPersistent = true,
+                // Whether the authentication session is persisted across 
+                // multiple requests. When used with cookies, controls
+                // whether the cookie's lifetime is absolute (matching the
+                // lifetime of the authentication ticket) or session-based.
 
-//            var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-//            var authProperties = new AuthenticationProperties
-//            {
-//                //AllowRefresh = <bool>,
-//                // Refreshing the authentication session should be allowed.
+                //IssuedUtc = <DateTimeOffset>,
+                // The time at which the authentication ticket was issued.
 
-//                //ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(10),
-//                // The time at which the authentication ticket expires. A 
-//                // value set here overrides the ExpireTimeSpan option of 
-//                // CookieAuthenticationOptions set with AddCookie.
+                //RedirectUri = <string>
+                // The full path or absolute URI to be used as an http 
+                // redirect response value.
+            };
 
-//                //IsPersistent = true,
-//                // Whether the authentication session is persisted across 
-//                // multiple requests. When used with cookies, controls
-//                // whether the cookie's lifetime is absolute (matching the
-//                // lifetime of the authentication ticket) or session-based.
+            await _httpContextAccessor.HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity),
+                authProperties);
+        }
 
-//                //IssuedUtc = <DateTimeOffset>,
-//                // The time at which the authentication ticket was issued.
+        public bool IsAuth()
+        {
+            return _httpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
+        }
 
-//                //RedirectUri = <string>
-//                // The full path or absolute URI to be used as an http 
-//                // redirect response value.
-//            };
-
-//            await _httpContextAccessor.HttpContext.SignInAsync(
-//                CookieAuthenticationDefaults.AuthenticationScheme,
-//                new ClaimsPrincipal(claimsIdentity),
-//                authProperties);
-//        }
+        public async Task LogoutForCookie()
+        {
+            await _httpContextAccessor.HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        }
     }
 
     public class FakeAuthenticationStateProvider : AuthenticationStateProvider
