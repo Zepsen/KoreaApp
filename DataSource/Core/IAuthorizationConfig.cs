@@ -31,7 +31,8 @@ namespace Handlers.Core
     {       
         bool Allow();
         void Check(BaseRequest request);
-        void Check(IBaseRequest<T> request);
+        void Check(IBaseRequest<T> request);        
+        bool IsInRole(string role);
     }
 
     public abstract class AbstractAuthorization<T> : IAuthorizationConfig<T>

@@ -7,6 +7,8 @@ using System.Linq;
 using System;
 using Handlers.Services;
 using Handlers;
+using Microsoft.AspNetCore.Components.Authorization;
+using System.Security.Claims;
 
 namespace Korea.Pipelines
 {
@@ -14,9 +16,9 @@ namespace Korea.Pipelines
         where TRequest : IRequest<TResponse>     
     {
         private readonly IAuthorizationConfig<TRequest> _auth;
-        private readonly IAuthService _authService;
+        private readonly AuthenticationStateProvider _authService;
 
-        public AuthBehavior(IEnumerable<IAuthorizationConfig<TRequest>> auth, IAuthService authService)
+        public AuthBehavior(IEnumerable<IAuthorizationConfig<TRequest>> auth, AuthenticationStateProvider authService)
         {
             _auth = auth.FirstOrDefault();
             _authService = authService;
@@ -30,9 +32,13 @@ namespace Korea.Pipelines
                 //Do not need auth
                 if (_auth?.Allow() ?? true) return next();
                 else 
-                {                    
-                    _auth.Check(request as BaseRequest);
-                    return next();
+                {
+                    var user = _authService.GetAuthenticationStateAsync().Result;
+                    var role = user.User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.Role).Value;
+                    if (_auth.IsInRole(role))
+                    {                        
+                        return next();
+                    } else throw new Exception("You can't reach this");
                 }
                 
             } catch (Exception ex)

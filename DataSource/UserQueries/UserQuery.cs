@@ -16,6 +16,7 @@ namespace DataSource.Handlers
         {
             public int Id { get; set; }
             public string Name { get; set; }
+            public string Email { get; set; }
             public int Age { get; set; }
         }
 
@@ -31,7 +32,13 @@ namespace DataSource.Handlers
         {
             public async Task<User> Handle(Request request, CancellationToken cancellationToken)
             {
-                throw new System.NotImplementedException();
+                return new User
+                {
+                    Id = 1,
+                    Name = "Test",
+                    Email = "test@test.com",
+                    Age = 21
+                };
             }
         }
     }
