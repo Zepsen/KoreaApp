@@ -29,9 +29,7 @@ namespace Handlers.Core
 
     public interface IAuthorizationConfig<T>
     {       
-        bool Allow();
-        void Check(BaseRequest request);
-        void Check(IBaseRequest<T> request);        
+        bool Allow();        
         bool IsInRole(string role);
     }
 
@@ -49,16 +47,7 @@ namespace Handlers.Core
         public bool IsInRole(string role)
         {
             return _roles.Contains(role);
-        }
-
-        public void Check(BaseRequest request)
-        {
-            var a = request?.Token;
-        }
-        public void Check(IBaseRequest<T> request)
-        {
-            var a = request?.Token;
-        }
+        }       
 
     }
 }

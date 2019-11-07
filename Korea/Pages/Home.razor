@@ -5,6 +5,8 @@
 @inject IAuthService authService;
 
 @inject Blazored.LocalStorage.ILocalStorageService localStorage
+
+
 <div class="row">
     @foreach (var category in categories)
     {
@@ -29,17 +31,24 @@
     protected override void Breadcrumbs()
     {
         BasePage.AddBreadcrump(new List<Breadcrumb>
-    {
+{
             new Breadcrumb { Name = "Categories", Active = true } ,
         });
     }
 
     private List<CategoryAllQuery.Category> categories = new List<CategoryAllQuery.Category>();
-
     protected override async Task OnInitializedAsync()
     {
         try
         {
+            var token = await mediator.Send<UserLoginQuery.User>(new UserLoginQuery.Request()
+            {
+                Email = "test@test",
+                Password = "test"
+            });
+
+            await localStorage.SetItemAsync("token", token.Token);
+
             var categoriesTask = mediator.Send<List<CategoryAllQuery.Category>>(new CategoryAllQuery.Request()
             {
                 Token = await localStorage.GetItemAsync<string>("token") ?? "test@email.com"

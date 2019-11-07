@@ -6,24 +6,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using Handlers.Services;
-using Microsoft.AspNetCore.Components.Authorization;
-using System.Security.Claims;
+using Handlers;
 
 namespace Korea.Pipelines
 {
     public class AuthBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, TResponse>
-        where TRequest : IRequest<TResponse>     
+        where TRequest : IRequest<TResponse>
     {
         private readonly IAuthorizationConfig<TRequest> _auth;
-        private readonly IAuthService _authService;
-        private readonly AuthenticationStateProvider _authProvider;
+        private readonly IAuthService authService;
 
-        public AuthBehavior(IEnumerable<IAuthorizationConfig<TRequest>> auth, 
-            IAuthService authService)
-            //AuthenticationStateProvider authService)
+        public AuthBehavior(
+            IEnumerable<IAuthorizationConfig<TRequest>> auth,
+            IAuthService authService    
+        )
         {
             _auth = auth.FirstOrDefault();
-            _authService = authService;
+            this.authService = authService;
         }
 
 
@@ -32,35 +31,22 @@ namespace Korea.Pipelines
             try
             {
                 //Do not need auth
+                
                 if (_auth?.Allow() ?? true) return await next();
-                else 
+                else
                 {
-                    //By custom provider
-                    var user = await _authProvider.GetAuthenticationStateAsync();
-                    
-                    var role = user.User.Claims.FirstOrDefault(i => i.Type == ClaimTypes.Role).Value;
-                    if (_auth.IsInRole(role))                    
-                    {
+                    var token = authService.Validate((request as BaseRequest).Token);
+                    if (true)
+                    {                        
                         return await next();
                     } else throw new Exception("You can't reach this");
 
-                    //By token
-                    //if(true)
-                    //{
-                    //    _auth.Check(request as BaseRequest);
-
-                    //By cookie
-                    //await _authService.LogoutForCookie();
-                    //await _authService.LoginForCookie("test@test", "nametest");
-                    //if (_authService.IsAuth()) {                        
-                    //    return await next();
-                    //} else throw new Exception("You can't reach this");
                 }
-                
+
             } catch (Exception ex)
             {
                 throw;
-            }            
+            }
         }
     }
 }
